@@ -124,8 +124,9 @@
                 <h2>Objetivos</h2>
                 <h4 style="margin-top: 20px;">Especificar a <b>arquitetura</b> de uma plataforma de <b>gerência</b> para redes <b>auto-organizáveis</b> com foco nas operações de <b>inicialização</b> da rede, no <b><i>plug-and-play</i></b> de dispositivos e no <b>aprovisionamento</b> de serviços. Para isso é necessário:</h4>
                  <ul class="content" style="margin-top:20px; list-style: initial; line-height: 40px;">
-                    <li class="item1"><h3>Projetar uma solução de gerenciamento capaz de iniciar a rede e de suportar mudanças de contexto tais como novos dispositivos e crescimento de utilização;</h3></li>
-                    <li class="item2"><h3>Definir mecanismos para representação e aprovisionamento de serviços comunicacionais, tais como os necessários para VR/AR e Telepresença, com alto nível de abstração; e,</h3></li>
+                    <!-- Adicionar especificação - unified process-->
+                    <li class="item1"><h3>Definir mecanismos para representação e aprovisionamento de serviços comunicacionais, tais como os necessários para VR/AR e Telepresença, com alto nível de abstração; e,</h3></li>
+                    <li class="item2"><h3>Projetar uma solução de gerenciamento capaz de iniciar a rede e de suportar mudanças de contexto tais como novos dispositivos e crescimento de utilização;</h3></li>
                     <li class="item3"><h3>Desenvolver um protótipo com base na solução proposta com foco nas operações de inicialização, plug-and-play de dispositivos e aprovisionamento de serviços.</h3></li>
                 </ul>
             </div>
@@ -134,28 +135,29 @@
                 <h1>2 - Fundamentação Teórica e Contextualização da Pesquisa</h1>
                 <ul class="content" style="margin-top:20px; list-style: initial; line-height: 40px;">
                     <h2>Gerenciamento de Rede</h2>
-                    <li class="item1"><h3>As redes de computadores e de telecomunicações moldaram as organizações empresariais e a própria sociedade que se tornaram dependentes destes serviços;</h3></li>
-                    <li class="item2"><h3>O <b>Gerenciamento de Rede</b> é um mecanismo fundamental para manter a rede funcionando e prover serviços de comunicação em níveis e requisitos mínimos; e,</h3></li>
-                    <li class="item3"><h3>O gerenciamento de rede ajuda a manter custos sob controle, otimiza a utilização de recursos de rede, melhora a qualidade de serviços e aumenta o retorno sobre o investimento.</h3></li>
+                    <li class="item1"><h3>As redes de computadores e de telecomunicações moldaram organizações empresariais e a própria sociedade que se tornaram dependentes destes serviços;</h3></li>
+                    <li class="item2"><h3>O <b>Gerenciamento de Rede</b> é um mecanismo fundamental para manter a rede funcionando apropriadamente e prover serviços de comunicação em níveis contratados; e,</h3></li>
+                    <li class="item3"><h3>O <b>Gerenciamento de Rede</b> ajuda a manter custos sob controle, otimiza recursos de rede, aumenta a produtividade e o retorno sobre o investimento.</h3></li>
                 </ol> 
             </div>
 
-            <div id="c2-nm-def" class="step slide" data-x="0" data-y="100">
+            <!-- <div id="c2-nm-def" class="step slide" data-x="0" data-y="100">
                 <h2>O Gerenciamento de Rede é:</h2>
                     <ul class="content" style="margin-top:60px; list-style: initial; line-height: 60px;">
                         <li class="item1"><h3>Segundo <b><i>Hegering</i></b>: <i>"o conjunto de medidas que garantem a eficiência e efetividade das operações de sistema conectados e recurso de rede em harmonia com objetivos corporativos"</i>.</h3></li>
                         <li class="item2"><h3>Segundo <b><i>Clemm</i></b>: <i>"o conjunto de técnicas, ferramentas e procedimentos utilizados nas atividades de operação, administração, manutenção e aprovisionamento de sistemas conectados em rede"</i>.</h3></li>
                         <li class="item3"><h3>Segundo <b><i>Subramanian</i></b>: <i>"o conjunto de processos responsáveis pela operação, administração, manutenção e aprovisionamento da rede."</i>.</h3></li>
                     </ul>
-            </div>
+            </div> -->
 
             <div id="c2-protevol" class="step slide" data-x="1500" data-y="100">
                 <h2>Padrões de Gerenciamento de Rede</h2>
                 <ul class="content" style="margin-top:60px; list-style: initial; line-height: 40px;">
-                    <li class="item1"><h3><b>FCAPS</b> : especifica mecanismos para monitoramento, controle e coordenação de sistemas conectados dividido em cinco áreas funcionais (<i>Fault</i>, <i>Configuration</i>, <i>Accounting</i>, <i>Performance</i> e <i>Security</i>);</h3></li>
+                    <li class="item1"><h3><b>FCAPS</b> : especifica mecanismos para monitoramento, controle e coordenação de sistemas conectados divididos em cinco áreas funcionais (<i>Fault</i>, <i>Configuration</i>, <i>Accounting</i>, <i>Performance</i> e <i>Security</i>);</h3></li>
                     <li class="item2"><h3><b>TMN</b> : especificação que abrange diversos aspectos relacionados a redes de telecomunicações, passando pelas áreas de planejamento, implantação, operação e administração através de quatro camadas lógicas (<i>Business</i>, <i>Service</i>, <i>Network</i> e <i>Element</i>) e uma física (<i>Network Element</i>);</h3></li>
                     <li class="item3"><h3><b>OAM&P</b> : especifica o gerenciamento de rede baseado em quatro funções (<i>Operations</i>, <i>Administration</i>, <i>Maintenance</i> e <i>Provisioning</i>); e,</h3></li>
                     <li class="item4"><h3><b>FAB</b> : define o ciclo de vida de gerenciamento em três estágios (<i>Fulfillment</i>, <i>Assurance</i> e <i>Billing</i>).</h3></li>
+                    <!--TODO - Adicionar SNMP - referenciar CMIP -->
                 </ul>
             </div>
 
@@ -277,6 +279,7 @@
                 <h2>Redes Auto-Organizadas</h2>
                 <ul class="content" style="margin-top:0px; list-style: initial; line-height: 33px;">
                     <li class="item1"><h3><b>SON - <i>Self-Organizing Network</i></b> - 3GPP:</h3>
+                        <!-- TODO verificar quais elementos o SON se aplica... apenas o core da rede -->
                         <ul style="list-style: initial;">
                             <li class="item1" style="margin-top: 0px; margin-left: 5%;"><h4>Automação das
 tarefas de planejamento, configuração, gerenciamento, otimização e cura de <b>Redes de Telecomunicações</b>;</h4></li>
@@ -312,6 +315,7 @@ tarefas de planejamento, configuração, gerenciamento, otimização e cura de <
             <div id="c2-sdn" class="step slide" data-x="15000" data-y="100">
                 <h2>Tecnologias Habilitadoras</h2>
                 <div style="text-align:center;  margin-top:4%">
+                    <!-- East bound... plano ortogonal -->
                     <h3>Software-Defined Networking</h3>
                     <img src="img/c2/sdn-layers.png" style="width:45%;"/>
                     <p style="font-size:22px">Fonte: <i>https://www.opennetworking.org/</i></p>
@@ -455,7 +459,7 @@ tarefas de planejamento, configuração, gerenciamento, otimização e cura de <
                     <li class="item2"><h3><b>Cenários</b></h3></li>
                     <ul style="list-style: initial;">
                         <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4>1) Inicialização de uma Rede SDN/OpenFlow;</h4></li>
-                        <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4>2) Plug-and-Play de switches OpenFlow:;</h4></li>
+                        <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4>2) Plug-and-Play de switches OpenFlow;</h4></li>
                         <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4>3) Aprovisionamento de serviço para comunicação de VoIP.</h4></li>
                     </ul>
 
@@ -614,7 +618,7 @@ ser contemplados?</h3></li>
                 </table>
             </div>
 
-            <div id="c4-app-reqnf2" class="step slide" data-x="9000" data-y="1700">
+            <!-- <div id="c4-app-reqnf2" class="step slide" data-x="9000" data-y="1700">
                 <h2>Requisitos Comunicacionais</h2>
                 <ul class="content" style="margin-top:20px; list-style: initial; line-height: 60px;">
                     <h3 style="margin-top:20px;">Classificação de Requisitos Não-Funcionais</h3>
@@ -623,7 +627,7 @@ ser contemplados?</h3></li>
                     <li class="item3"><h3>Controle de <b>canal</b>: RNF07, RNF08, RNF09, RNF10, RNF11</h3></li>
                     <li class="item4"><h3>Controle de <b>acesso</b>: RNF12, RNF13, RNF14, RNF15, RNF16</h3></li>
                 </ul>
-            </div>
+            </div> -->
 
             <div id="c4-app-sonar1" class="step slide" data-x="10500" data-y="1700">
                 <h2><b>SONAr</b> - <i>Self-Organizing Network Architecture</i></h2>
@@ -641,11 +645,12 @@ ser contemplados?</h3></li>
             </div>
 
             <div id="c4-app-sonar3" class="step slide" data-x="13500" data-y="1700">
-                <h2 style="margin-top:20px;">Modelo de Camadas SONAr</h3>
+                <h2 style="margin-top:20px;">Modelo Camadas SONAr</h3>
                 <img src="img/c4/camadas.png" style="width: 80%; margin-top:40px;"/>
             </div>
 
             <div id="c4-app-sonar4" class="step slide" data-x="15000" data-y="1700">
+                <!-- TODO : verificar componentes. Conversar com o professor -->
                 <h2>Diagrama de Componentes <b>SONAr</b></h3>
                 <img src="img/c4/componentes.png" style="width: 65%; margin-top:20px; margin-left:15%;"/>
             </div>
@@ -677,7 +682,7 @@ ser contemplados?</h3></li>
                 <img src="img/c4/selfconfcomp.png" style="width: 90%; margin-top:40px; margin-left:5%;"/>
             </div>
 
-            <div id="c4-self-conf2" class="step slide" data-x="24000" data-y="1700">
+            <!-- <div id="c4-self-conf2" class="step slide" data-x="24000" data-y="1700">
                 <h2>1 - Fluxo de <b>Inicialização da Rede</b></h2>
                 <img src="img/c4/flow-boot.png" style="margin-top:40px; margin-left:5%;"/>
             </div>
@@ -720,9 +725,9 @@ ser contemplados?</h3></li>
             <div id="c4-self-conf10" class="step slide" data-x="37000" data-y="1700">
                 <h2>3 - Fluxo de <b>Configuração de Serviços</b></h2>
                 <img src="img/c4/flow-serv.png" style="margin-left:5%;"/>
-            </div>
+            </div> -->
 
-             <div id="c5" class="step slide" data-x="-1500" data-y="2500">
+             <!-- <div id="c5" class="step slide" data-x="-1500" data-y="2500">
                 <h1>5 - Aspectos de Projeto e Implementação do Protótipo</h1>
                 <h2 style="margin-top: 20px;">Servidor <b>SONAr</b></h2>
                 <ul class="content" style="margin-top:20px; list-style: initial; line-height: 40px;">
@@ -756,7 +761,7 @@ ser contemplados?</h3></li>
                     <li class="item4"><h3><b>SONAr Model</b>.</h3></li>
                     <li class="item5"><h3><b>SONAr Util</b>.</h3></li>
                 </ul>
-            </div>
+            </div> -->
 
 
             <div id="c6-exp" class="step slide" data-x="-1500" data-y="3300">
@@ -907,32 +912,30 @@ para a Raiz.</h5>
 
             <div id="c7-conc" class="step slide" data-x="-1500" data-y="4100">
                 <h1>7 - Conclusão</h1>
-                <ul class="content" style="margin-top:10px; list-style: initial; line-height: 30px;">
-                    <li class="item1"><h3>As <b>Redes de Computadores</b> são imprescindíveis para sociedade;</li>
-                    <li class="item2"><h3>O <b>Gerenciamento de Rede</b> é um mecanismo fundamental para manter a rede operacional e prover serviços;</h3></li>
-                    <li class="item3"><h3>As <b>Redes Futuras</b> não poderão ser gerenciadas com as estratégias atuais;</h3></li>
-                    <li class="item4"><h3>A <b>Computação Autônoma</b> pode ser utilizada para a concepção de <b>Redes Auto-Gerenciáveis</b>;</h3></li>
-                    <li class="item5"><h3><b>Serviços Comunicacionais</b> podem ser definidos por intenções descritas ou detectadas;</h3></li>
-                    <li class="item6"><h3>O <b>SONAr</b> define uma <b>Camada de Gerenciamento</b> específica para os componentes de gerenciamento;</h3></li>
-                    <li class="item7"><h3>As <b>Entidades SONAr</b> são capazes de prover propriedades de auto-organização para as Redes de Computadores;</h3></li>
-                    <li class="item8"><h3>Este trabalho demonstra que <b>SONAr</b> pode ser utilizado para automação das operações da propriedade de <b><i>Self-Configuration</i></b>;</h3></li>
+                <ul class="content" style="margin-top:10px; list-style: initial; line-height: 36px;">
+                    <li class="item3"><h3>As <b>Redes Futuras</b> não poderão ser gerenciadas com as estratégias atuais</h3></li>
+                    <li class="item4"><h3>A <b>Computação Autônoma</b> pode ser utilizada para a concepção de <b>Redes Auto-Gerenciáveis</b></h3></li>
+                    <li class="item5"><h3><b>Serviços</b> podem ser especificadas por intenções descritas ou detectadas</h3></li>
+                    <li class="item6"><h3>O <b>SONAr</b> define uma nova <b>Arquitetura</b> para o <b>Plano de Gerenciamento</b></h3></li>
+                    <li class="item7"><h3>As <b>Entidades SONAr</b> são capazes de prover propriedades de auto-organização para as Redes de Computadores</h3></li>
+                    <li class="item8"><h3>Este trabalho demonstra que <b>SONAr</b> pode ser utilizado para automação das operações da propriedade de <b><i>Self-Configuration</i></b></h3></li>
                 </ul>
             </div>
 
-            <div id="c7-res" class="step slide" data-x="0" data-y="4100">
+            <!-- <div id="c7-res" class="step slide" data-x="0" data-y="4100">
                 <h2>Resultados Experimentais</h2>
                 <ul class="content" style="margin-top:20px; list-style: initial; line-height: 38px;">
-                    <li class="item1"><h3>Viabilidade da solução proposta pelo <b>SONAr</b> (<b style="color: red;">Qualitativo</b>);</h3></li>
-                    <li class="item2"><h3>Automação e otimização da operação de <b>Inicialização da Rede</b> (<b style="color: red;">Qualitativo</b>);</h3></li>
+                    <li class="item1"><h3>Viabilidade da solução proposta pelo <b>SONAr</b>;</h3></li>
+                    <li class="item2"><h3>Automação e otimização da operação de <b>Inicialização da Rede</b>;</h3></li>
                     <li class="item3"><h3>Uso do <b>CPI</b> adiciona um baixo <i>overhead</i> que é compensado pela melhoria no tempo gasto nas operações de inicialização e <i>plug-and-play</i> de dispositivos (<b style="color: blue;">Quantitativo</b>);</h3></li>
                     <li class="item4"><h3>Maior flexibilidade da rede para o aprovisionamento de serviços de comunicação (<b style="color: red;">Qualitativo</b>);</h3></li>
                     <li class="item5"><h3>O uso da técnica de "<i>Delayed Discovery</i>" torna o processo de plug-and-play mais rápido (<b style="color: blue;">Quantitativo</b>);</h3></li>
                     <li class="item6"><h3>Configurar fluxos de controle em <i>switches</i> <b>OpenFlow</b> é mais eficiente quando começa-se dos nós mais distantes (<b style="color: blue;">Quantitativo</b>);</h3></li>
                     <li class="item7"><h3>As funções e componentes de rede abstraídos como contêineres (<i>Docker</i>) são mais fácilmente aprovisionadas e utilizam melhor os recursos disponíveis (<b style="color: red;">Qualitativo</b>).</h3></li>
                 </ul>
-            </div>
+            </div> -->
 
-            <div id="c7-pub" class="step slide" data-x="1500" data-y="4100">
+<!--             <div id="c7-pub" class="step slide" data-x="1500" data-y="4100">
                 <h2>Objetivos Alcançados</h2>
                 <ul class="content" style="margin-top:20px; list-style: initial; line-height: 42px;">
                     <li class="item1"><h3>Modelo de Representação e Aprovisionamento de Intent-based Services - <b>IBSM</b>;</h3></li>
@@ -942,26 +945,26 @@ para a Raiz.</h5>
                     <li class="item5"><h3>Implementação de uma versão inicial do <b>SONAr</b> com suporte ao <b>IBSM</b> e foco em <b>Self-Configuration</b>;</h3></li>
                     <li class="item6"><h3>Realização de Experimentos e comprovação de Resultados com ganhos Qualitativos e Quantitativos.</h3></li>
                 </ul>
-            </div>
+            </div> -->
 
             <div id="c7-obj" class="step slide" data-x="3000" data-y="4100">
                 <h2>Publicações</h2>
                 <ul class="content" style="margin-top:20px; list-style: initial; line-height: 60px;">
-                    <li class="item1"><h2><i>Bootstrapping and Plug-and-Play Operations on Software Defined Networks: A Case Study on Self-Configuration Using the SONAr Architecture</i> - <b>CLOSER 2020</b></h2></li>
+                    <li class="item1"><h3><i>Bootstrapping and Plug-and-Play Operations on Software Defined Networks: A Case Study on Self-Configuration Using the SONAr Architecture</i> - <b>CLOSER 2020</b></h3></li>
                     <li class="item2"><h3><i>Network Self-Configuration for Edge Elements Using Self-Organizing Networks Architecture (SONAr)</i> - <b>CLOSER 2020</b></h3></li>
                     <li class="item3"><h3><i>A self-healing platform for the control and management planes communication in softwarized and virtualized networks</i> - <b>CLOSER 2020</b></h3></li>
                     <li class="item4"><h3>(Artigo a ser submetido para o IEEE TNSM)</b></h3></li>
                 </ul>
             </div>
 
-            <div id="c7-persp" class="step slide" data-x="4500" data-y="4100">
+            <!-- <div id="c7-persp" class="step slide" data-x="4500" data-y="4100">
                 <h2>Perspectivas Futuras</h2>
                 <ul class="content" style="margin-top:20px; list-style: initial; line-height: 60px;">
                     <li class="item1"><h3>Evolução da solução proposta para outros tipos de redes;</h3></li>
                     <li class="item2"><h3>Implementação de Entidades responsáveis por outras propriedades de auto-gerenciamento;</h3></li>
                     <li class="item3"><h3>Adequação da solução para o atendimento de requisitos <i>carrier-grade</i></h3></li>
                 </ul>
-            </div>
+            </div> -->
 
             <div class="step slide" data-x="0" data-y="4900">
                 <div style="text-align: center;">
