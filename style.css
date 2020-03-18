@@ -806,3 +806,28 @@ b {
         opacity: 1;
     }
 }
+
+
+.rodape {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    float: right;
+}
+
+.cabecalho {
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+}
+
+.cabecalho .ufu{
+    height: 50px;
+    vertical-align: middle;
+}
+
+.cabecalho .mehar{
+    height: 30px;
+    vertical-align: middle;
+}
