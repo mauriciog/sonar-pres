@@ -1,1387 +1,340 @@
 <!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=1480" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <title>Redes Auto-organizadas SONAr/IBSM:Especificação de propriedades de Self-Configuration</title>
-        
-        <meta name="description" content="Apresentação utilizada na qualificação de doutorado 'Redes Auto-organizadas SONAr/IBSM: Especificação de propriedades de Self-Configuration'" />
-        <meta name="author" content="Mauricio" />
+    <title>SONAr: Desenvolvimento de uma Plataforma para Gerenciamento e Configuração de Redes Auto-Organizadas}{SONAr: Development of a Platform for the Management and Configuration of Self-Organized Networks</title>
+    <meta name="description" content="">
 
-        <link href="font.css" rel="stylesheet"/>
-        <link href="style.css" rel="stylesheet" />
-    </head>
-    <body>
-        <div class="fallback-message">
-            <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
-            <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
-        </div>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
 
-        <div id="impress">
+    <!-- CSS WebSlides -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/webslides.css">
 
-            <div id="title" class="step slide" data-x="-1500" data-y="-1500">
-                <img src="img/title.png"/>
-                <div class="rodape"style="width: 420px; padding:20px">
-                    <img style="height:20px; width: 20px;" src="img/pres.png"/> <span style="font-size: 18px; font-weight: bold;">https://mauriciog.github.io/sonar-pres</span><br/>
-                    <img style="height:20px; width: 20px;" src="img/conf.png"/> <span style="font-size: 18px; font-weight: bold;">https://whereby.com/msfreitas</span>
-                </div>
+    <!-- Optional - CSS SVG Icons (Font Awesome) -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/svg-icons.css">
+  </head>
+  <body>
+    <main role="main">
+      <article id="webslides" class="vertical">
+        <!-- Quick Guide
+          - Each parent <section> in the <article id="webslides"> element is an individual slide.
+          - Vertical sliding = <article id="webslides" class="vertical">
+          - <div class="wrap"> = container 90% / <div class="wrap size-50"> = 45%;
+        -->
+        <section>
+          <span class="background-right-bottom" style="background-image:url('images/background.png')"></span>
+          <div class="wrap aligncenter">
+            <h1 class="text-title">SONAr: Desenvolvimento de uma Plataforma para Gerenciamento e Configuração de Redes Auto-Organizadas</h1>
+            <br/>
+            <p class="text-intro">Maurício Amaral Gonçalves</p>
+            <p class="text-subtitle">Orientador: Pedro Frosi Rosa</p>
+            <hr/>
+            <ul class="flexblock blink">
+              <li>
+                <a href="http://www.ufu.br/" target="_blank">
+                  <div>
+                    <img src="images/ufu.png" alt="UFU">
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="http://www.facom.ufu.br/" target="_blank">
+                  <div>
+                    <img src="images/facom.png" alt="FACOM">
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="http://www.ppgco.facom.ufu.br/" target="_blank">
+                  <div>
+                    <img src="images/ppgco.png" alt="PPGCO">
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="http://mehar.facom.ufu.br/" target="_blank">
+                  <div>
+                    <img src="images/mehar.png" alt="MEHAR">
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-50 aligncenter">
+            <h2><strong>Why WebSlides?</strong></h2>
+            <p class="text-intro"><a href="demos/why-webslides.html" title="Why WebSlides?">Presentations</a>, <a href="demos/landings.html" title="Landings">landings</a>, <a href="demos/portfolios.html" title="Portfolios">portfolios</a>, and <a href="demos/longforms.html" title="Longforms">longforms</a>.</p>
+            <div class="bg-white shadow">
+              <ul class="flexblock reasons">
+                <li>
+                  <h2>An opportunity to engage.</h2>
+                  <p>WebSlides is about good karma. This is about telling the story, and sharing it in a beautiful way. HTML and CSS as narrative elements.</p>
+                </li>
+                <li>
+                  <h2>Work better, faster.</h2>
+                  <p>Designers, marketers, and journalists can now focus on the content. Simply <a href="demos/index.html" title="WebSlides Demos">choose a demo</a> and customize it in minutes.</p>
+                </li>
+              </ul>
             </div>
-
-            <div id="subtitle" class="step slide" data-x="0" data-y="-1500">
-                <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-
-                <q class="quote"><b>SONAr/BSM</b>: Desenvolvimento de uma Plataforma para Orquestração de Redes Auto-Organizadas</q>
-
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
+            <!-- .end .bg-white shadow -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>WebSlides is really easy</strong></h3>
+                <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
+                <p>Code is clean and scalable. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Making an HTML presentation has never been so fast</strong>.</p>
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre>&lt;article id="webslides"&gt;
+  <span class="code-comment">&lt;!-- Slide 1 --&gt;</span>
+  &lt;section&gt;
+    &lt;h1&gt;Design for trust&lt;/h1&gt;
+  &lt;/section&gt;
+  <span class="code-comment">&lt;!-- Slide 2 --&gt;</span>
+  &lt;section class="bg-primary"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;h2&gt;.wrap = container (width: 90%)&lt;/h2&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+&lt;/article&gt;
+</pre>
+              </div>
+              <!-- .end .column -->
             </div>
-
-            <div id="schedule" class="step slide" data-x="1500" data-y="-1500">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <div class="wrap">
+            <h2>Features</h2>
+            <ul class="flexblock features">
+              <li>
+                <div>
+                  <h2>
+                    <span>&rarr;</span>
+                    Simple Navigation
+                  </h2>
+                  with arrow keys, presenter...
                 </div>
-                <h1>Roteiro</h1>
-                 <ol class="content">
-                    <li><h2>1 - Introdução</h2></li>
-                    <li><h2>2 - Fundamentação Teórica e Contextualização da Pesquisa</h2></li>
-                    <li><h2>3 - Método de Pesquisa</h2></li>
-                    <li><h2>4 - Apresentação do modelo <strong>IBSM</strong>, Visão Geral da Arquitetura <strong>SONAr</strong>, e Especificação de uma Solução de <strong>Auto-Configuração</strong></h2></li>
-                    <li><h2>5 - Experimentos e Análise dos Resultados</h2></li>
-                    <li><h2>6 - Conclusão</h2></li>
-                </ol> 
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
+              </li>
+              <li>
+                <div>
+                  <h2>
+                    <svg class="fa-link">
+                      <use xlink:href="#fa-link"></use>
+                    </svg>
+                    Permalinks
+                  </h2>
+                  Go to a specific slide.
                 </div>
-            </div>
-
-            <div id="c1-change" data-x="-1500" data-y="-700" class="slide step">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
+              </li>
+              <li>
+                <div>
+                  <h2>
+                    <svg class="fa-clock-o">
+                      <use xlink:href="#fa-clock-o"></use>
+                    </svg>
+                    Slide Counter
+                  </h2>
+                  Current/Total number.
                 </div>
-                <h1>1 - Introdução</h1>
-                <div style="height:80%; text-align:center; margin-top:20px">
-                    <h2 style="text-align:left;">As aplicações da rede mudaram.</h3><br/>
-                    <table style="text-align: center;">
-                    <tr>
-                        <td>
-                            <img src="img/c1/inicio.jpg" style="height:35%"/>
-                        </td>
-                        <td>
-                            <img src="img/c1/arrow-right-dot.png" style="height:15%"/>
-                        </td>
-                        <td>
-                            <img src="img/c1/iot.jpeg" style="height:43%"/>
-                            <img src="img/c1/5G.jpg" style="height:43%"/><br/>
-                            <img src="img/c1/edge.png" style="height:16%"/>
-                        </td>
-                    </tr>
-                </table>
+              </li>
+              <li>
+                <div>
+                  <h2>
+                    <span>40<sup>+</sup></span>
+                    Beautiful Components
+                  </h2>
+                  Covers, cards, quotes...
                 </div>
-            </div>
-
-            <div id="c1-grow" data-x="0" data-y="-700" class="slide step">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
+              </li>
+              <li>
+                <div>
+                  <h2>
+                    <svg class="fa-text-height">
+                      <use xlink:href="#fa-text-height"></use>
+                    </svg>
+                    Vertical Rhythm
+                  </h2>
+                  Use multiples of 8.
                 </div>
-                <div style="height:80%; text-align:center; margin-top:20px">
-                    <h2 style="text-align:left;">O número de nós na redes cresceu e novos requisitos surgiram.</h3><br/>
-                    <table style="text-align: center;">
-                    <tr>
-                        <td>
-                            <img src="img/c1/hosts.png" style="height:80%;"/>
-                        </td>
-                        <td>
-                            <div style="width:50px;"/>
-                        </td>
-                        <td>
-                            <img src="img/c1/requirements.jpg" style="height:80%;"/>
-                        </td>
-                    </tr>
-                </table>
+              </li>
+              <li>
+                <div>
+                  <h2>
+                    <span>500<sup>+</sup></span>
+                    SVG Icons
+                  </h2>
+                  Font Awesome Kit.
                 </div>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c1-auto" data-x="1500" data-y="-700" class="slide step">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Gerenciamento de Rede e Computação Autônoma</h2>
-                <div style="height:80%; text-align:center; margin-top:20px">
-                    <table style="text-align: center;">
-                    <tr>
-                        <td>
-                            <img src="img/c1/management.png" style="height:100%;"/>
-                        </td>
-                        <td>
-                            <img src="img/c1/arrow-right.png" style="height:15%"/>
-                        </td>
-                        <td>
-                            <img src="img/c1/autonomo.png" style="height:100%;"/>
-                        </td>
-                    </tr>
-                </table>
-                </div>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c1-motiv" data-x="3000" data-y="-700" class="slide step">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Motivações e Justificativas</h2>
-                 <ul class="content" style="margin-top:20px; list-style: initial; line-height: 60px;">
-                    <li class="item1"><h3>O <b>Gerenciamento de Rede</b> é fundamental para manter a rede <b>operacional</b>;</h3></li>
-                    <li class="item2"><h3>As <b>Redes Atuais</b> são sistemas <b>complexos</b>;</h3></li>
-                    <li class="item3"><h3>As <b>Redes Futuras</b> não poderão ser gerenciadas com as técnicas atuais;</h3></li>
-                    <li class="item4"><h3>A <b>Computação Autônoma</b> pode ser utilizada para lidar com essa complexidade;</h3></li>
-                    <li class="item5"><h3>A <b>automação</b> do gerenciamento reduz o <b>OPEX</b>, melhora o <b>QoS</b> e viabiliza <b>novas aplicações</b>;</h3></li>
-                    <li class="item6"><h3>Não há solução formal de <b>Self-Management</b> para as redes de computadores; e,</h3></li>
-                    <li class="item7"><h3><b>SDN</b> e <b>NFV</b> viabilizam soluções nos planos de controle e de dados de maneira mais simples.</li>
-                </ol> 
-            </div>
-
-            <div id="c1-hipotesis" data-x="4500" data-y="-700" class="slide step">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Hipótese</h2>
-                <q class="hipostesis">Assume-se que a provisão da propriedade de <b>auto-configuração</b> é fundamental para a <b>viabilização</b> das <b>redes modernas</b> pois <b>flexibiliza</b> a implantação de <b>comportamentos</b> na rede, torna o <b>aprovisionamento</b> de serviços mais <b>dinâmico</b> e diminui a <b>complexidade</b> das <b>operações</b> de inicialização e extensão da infraestrutura.</q>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c1-objetivos" data-x="6000" data-y="-700" class="slide step">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Objetivos</h2>
-                <h4 style="margin-top: 20px;">Especificar a <b>arquitetura</b> de uma plataforma de <b>gerência</b> para redes <b>auto-organizáveis</b> com foco nas operações de <b>inicialização</b> da rede, no <b><i>plug-and-play</i></b> de dispositivos e no <b>aprovisionamento</b> de serviços. Para isso é necessário:</h4>
-                 <ul class="content" style="margin-top:20px; list-style: initial; line-height: 40px;">
-                    <!-- Adicionar especificação - unified process-->
-                    <li class="item1"><h3>Definir mecanismos para representação e aprovisionamento de serviços comunicacionais, tais como os necessários para VR/AR e Telepresença, com alto nível de abstração; e,</h3></li>
-                    <li class="item2"><h3>Projetar uma solução de gerenciamento capaz de iniciar a rede e de suportar mudanças de contexto tais como novos dispositivos e crescimento de utilização;</h3></li>
-                    <li class="item3"><h3>Desenvolver um protótipo com base na solução proposta com foco nas operações de inicialização, plug-and-play de dispositivos e aprovisionamento de serviços.</h3></li>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <div class="wrap">
+            <h2><strong>WebSlides Demos</strong></h2>
+            <p>Contribute on <a href="https://github.com/webslides/webslides" title="Contribute on Github">Github</a>. <span class="alignright"><a href="demos/index.html" title="WebSlides Demos">View all &rsaquo;</a></span></p>
+            <ul class="flexblock gallery">
+              <li>
+                <a href="demos/why-webslides.html" title="Why WebSlides?">
+                  <figure>
+                    <img alt="Thumbnail Why WebSlides?" src="https://webslides.tv/static/images/demos-why.png">
+                    <figcaption>
+                      <h2>Why WebSlides?</h2>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="demos/landings.html" title="Landings">
+                  <figure>
+                    <img alt="Thumbnail Landings" src="https://webslides.tv/static/images/demos-landings.png">
+                    <figcaption>
+                      <h2>Landings</h2>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="demos/portfolios.html" title="Portfolios">
+                  <figure>
+                    <img alt="Thumbnail Portfolios" src="https://webslides.tv/static/images/demos-portfolios.png">
+                    <figcaption>
+                      <h2>Portfolios</h2>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="demos/keynote.html" title="Apple Keynote">
+                  <figure>
+                    <img alt="Thumbnail Apple Keynote" src="https://webslides.tv/static/images/demos-apple.png">
+                    <figcaption>
+                      <h2>Apple Keynote</h2>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h4>
+                  <svg class="fa-life-ring">
+                    <use xlink:href="#fa-life-ring"></use>
+                  </svg>
+                  <strong>Guides</strong>
+                </h4>
+                <p>If you need help, here's just three tutorials. Just a basic knowledge of HTML is required:</p>
+                <ul class="description">
+                  <li><a href="demos/components.html" title="WebSlides Components">WebSlides Components</a>.</li>
+                  <li><a href="demos/classes.html" title="WebSlides Classes">WebSlides Classes</a>.</li>
+                  <li><a href="demos/media.html" title="WebSlides Media">WebSlides Media: images, videos...</a></li>
                 </ul>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c2-nm-int" class="step slide" data-x="-1500" data-y="100">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h1>2 - Fundamentação Teórica e Contextualização da Pesquisa</h1>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 40px;">
-                    <h2>Gerenciamento de Rede</h2>
-                    <li class="item1"><h3>As redes de computadores e de telecomunicações moldaram organizações empresariais e a própria sociedade que se tornaram dependentes destes serviços;</h3></li>
-                    <li class="item2"><h3>O <b>Gerenciamento de Rede</b> é um mecanismo fundamental para manter a rede funcionando apropriadamente e prover serviços de comunicação em níveis contratados; e,</h3></li>
-                    <li class="item3"><h3>O <b>Gerenciamento de Rede</b> ajuda a manter custos sob controle, otimiza recursos de rede, aumenta a produtividade e o retorno sobre o investimento.</h3></li>
-                </ol>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c2-protevol" class="step slide" data-x="0" data-y="100">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Padrões de Gerenciamento de Rede</h2>
-                <ul class="content" style="margin-top:60px; list-style: initial; line-height: 40px;">
-                    <li class="item1"><h3><b>FCAPS</b> : especifica mecanismos para monitoramento, controle e coordenação de sistemas conectados divididos em cinco áreas funcionais (<i>Fault</i>, <i>Configuration</i>, <i>Accounting</i>, <i>Performance</i> e <i>Security</i>);</h3></li>
-                    <li class="item2"><h3><b>TMN</b> : especificação que abrange diversos aspectos relacionados a redes de telecomunicações, passando pelas áreas de planejamento, implantação, operação e administração através de quatro camadas lógicas (<i>Business</i>, <i>Service</i>, <i>Network</i> e <i>Element</i>) e uma física (<i>Network Element</i>);</h3></li>
-                    <li class="item3"><h3><b>OAM&P</b> : especifica o gerenciamento de rede baseado em quatro funções (<i>Operations</i>, <i>Administration</i>, <i>Maintenance</i> e <i>Provisioning</i>); e,</h3></li>
-                    <li class="item4"><h3><b>FAB</b> : define o ciclo de vida de gerenciamento em três estágios (<i>Fulfillment</i>, <i>Assurance</i> e <i>Billing</i>).</h3></li>
+              </div>
+              <div class="column">
+                <figure><img class="aligncenter" src="static/images/setup.png" alt="WebSlides Files"></figure>
+              </div>
+              <div class="column">
+                <h4>
+                  <svg class="fa-cubes">
+                    <use xlink:href="#fa-cubes"></use>
+                  </svg>
+                  <strong>Built to expand</strong>
+                </h4>
+                <p>The best way to <strong>inspire with your content</strong> is to connect on a personal level:</p>
+                <ul class="description">
+                  <li>Background images: <a href="http://unsplash.com">Unsplash</a>.</li>
+                  <li>CSS animations: <a href="https://daneden.github.io/animate.css/">Animate.css</a>.</li>
+                  <li>Longforms: <a href="http://michalsnik.github.io/aos/"> Animate on scroll</a>.</li>
                 </ul>
-            </div>
-
-
-            <div id="c2-nm-def" class="step slide" data-x="1500" data-y="100">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Frameworks de Gerenciamento:</h2>
-                    <ul class="content" style="margin-top:60px; list-style: initial; line-height: 60px;">
-                        <li class="item1"><h3><b>SNMP (<i>Simple Network Management Protocol</i>)</b> : consiste de um conjunto de padrões de gerenciamento de rede, incluindo um protocolo da camada de aplicação, um esquema de banco de dados, e um conjunto de objetos de dados. O <i>framework se baseia em Agentes Mestres (<i>Master Agents</i>), Sub-agentes (<i>Subagents</i>) e Estações de Gerenciamento (<i>Management Stations</i>).</h3></li>
-
-                        <li class="item1"><h3><b>CMIP (<i>Common Management Information Protocol</i>)</b> : implementação do CMIS definido pelo ITU-T X.711 que contempla uma gama maior (e mais complexa) de funcionalidades que o SNMP e provê mais segurança entre na comunicação entre agentes e estações de gerenciamento.</h3></li>
-                    </ul>
-            </div> 
-
-            <div id="c2-estrate" class="step slide" data-x="3000" data-y="100">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Gerenciamento de Redes Futuras</h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 40px;">
-                    <h3>O 5G introduz grandes desafios:</h3>
-                    <li class="item1"><h3>Volume de dados móveis <b>1000 vezes mais alto</b> por área geográfica;</h3></li>
-                    <li class="item2"><h3><b>10 a 100 vezes mais</b> dispositivos conectados;</h3></li>
-                    <li class="item3"><h3>Taxa de dados típica de usuário <b>10 a 100 vezes mais alta</b>;</h3></li>
-                    <li class="item4"><h3>Consumo de energia <b>10 vezes menor</b>;</h3></li>
-                    <li class="item5"><h3>Latência de ponta a ponta <b>menor que 1ms</b>; e,</h3></li>
-                    <li class="item6"><h3>Acesso 5G <b>onipresente</b>, inclusive em áreas de baixa densidade.</h3></li>
-                </ul>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-
-            <div id="c2-multi" class="step slide" data-x="4500" data-y="100">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Gerenciamento de Redes Futuras</h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 60px;">
-                    <li class="item1"><h3>A <b><i>Internet das Coisas</i></b> pode aumentar de maneira dramática a quantidade de nós conectados;</h3></li>
-                    <li class="item2"><h3><b><i>Content Delivery Network</i></b> requer requisitos de baixa latência e maior flexibilidade para otimização de conteúdo;</h3></li>
-                    <li class="item3"><h3>A <b><i>Edge Computing</i></b> depende do aprovisionamento automático de aplicações na borda da rede; e,</h3></li>
-                    <li class="item4"><h3><b>SDN</b> e <b>NFV</b> introduzem novos elementos passíveis de falhas.</h3></li>
-                </ul>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c2-auto" class="step slide" data-x="6000" data-y="100">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Computação Autônoma</h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 40px;">
-                    <h3>Características de um <b>Sistema Autônomo</b>:
-                        <li class="item1"><h3> deve ser capaz de se configurar (e reconfigurar) diante mudanças de contexto programadas ou aleatórias;</h3></li>
-                        <li class="item2"><h3> deve sempre procurar maneiras de otimizar o seu comportamento;</h3></li>
-                        <li class="item3"><h3> deve ser capaz de se recuperar de eventos rotineiros ou extraordinários que possam causar o seu mau funcionamento; e, </h3></li>
-                        <li class="item4"><h3> deve resistir a ameaças externas e impedir o uso indevido.</h3></li>
-                </ul>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c2-auto-2" class="step slide" data-x="7500" data-y="100">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Níveis de Automação:</h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 40px;">
-                        <li class="item1"><h3> <b>manual</b> - todas as tarefas são realizadas por administradores;</h3></li>
-                        <li class="item2"><h3> <b>gerenciado</b> - administradores utilizam ferramentas para a realização de atividades específicas;</h3></li>
-                        <li class="item3"><h3> <b>preditivo</b> - o sistema é capaz de analisar dados e recomendar alterações para administradores;</h3></li>
-                        <li class="item4"><h3> <b>adaptativo</b> - o sistema é capaz de se gerenciar, mas ainda precisa dos administradores no tratamento de situações mais complexas; e,</h3></li>
-                        <li class="item5"><h3> <b>autônomo</b> - o sistema é completamente capaz de se gerenciar com base em políticas definidas por administradores.</h3></li>
-                </ul>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c2-world" class="step slide" data-x="9000" data-y="100">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>4 Principais Fundamentos de Computação Autônoma</h2>
-                <ul class="content" style="margin-top:0px; list-style: initial; line-height: 30px;">
-                    <li class="item1"><h3><b><i>self-configuration</i></b>:</h3>
-                        <ul style="list-style: initial;">
-                            <li class="item1" style="margin-top: 0px; margin-left: 5%;"><h4>adaptam-se automaticamente a ambientes dinâmicos,</h4></li>
-                            <li class="item1" style="margin-top: 0px; margin-left: 5%;"><h4>têm a capacidade de definir o seu comportamento em tempo de execução, e,</h4></li>
-                            <li class="item1" style="margin-top: 0px; margin-left: 5%;"><h4>permitem a extensão de funcionalidades e sua distribuição sem intervenção humana;</h4></li>
-                        </ul>
-                    </li>
-                    <li class="item2"><h3><b><i>self-healing</i></b>:</h3>
-                        <ul style="list-style: initial;">
-                            <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4> monitoram, diagnosticam e corrigem falhas,</h4></li>
-                            <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4> predizem problemas e tomam decisões preventivas para evitar falhas, e</h3></li>
-                            <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4> são resilientes a falhas e se mantêm sempre disponíveis;</h4></li>
-                        </ul>
-                    </li>
-                    <li class="item3"><h3><b><i>self-optimization</i></b>:</h3>
-                        <ul style="list-style: initial;">
-                            <li class="item3" style="margin-top: 0px; margin-left: 5%;"><h4> monitoram e ajustam recursos de maneira automática,</h4></li>
-                            <li class="item3" style="margin-top: 0px; margin-left: 5%;"><h4> permitem a alocação, balanceamento de recursos sem intervenção humana, e</h3></li>
-                            <li class="item3" style="margin-top: 0px; margin-left: 5%;"><h4> analisam a utilização e tomam medidas para evitar o desperdício de recursos;</h4></li>
-                        </ul>
-                    </li>
-                    <li class="item4"><h3><b><i>self-protection</i></b>:</h3>
-                        <ul style="list-style: initial;">
-                            <li class="item4" style="margin-top: 0px; margin-left: 5%;"><h4> antecipam,detectam e se protegem de ataques,</h4></li>
-                            <li class="item4" style="margin-top: 0px; margin-left: 5%;"><h4> aplicam técnicas para autorização de acesso a recursos e identificação de intrusos, e </h3></li>
-                            <li class="item4" style="margin-top: 0px; margin-left: 5%;"><h4> identificam falhas de segurança e aplicam correções/atualizações de forma automática.</h4></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <div id="c2-brasil" class="step slide" data-x="10500" data-y="100">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Outros Fundamentos de Computação Autônoma </h2>
-                <ul class="content" style="margin-top:0px; list-style: initial; line-height: 30px;">
-                    <li class="item1"><h3><b><i>self-planning</i></b>:</h3>
-                        <ul style="list-style: initial;">
-                            <li class="item1" style="margin-top: 0px; margin-left: 5%;"><h4>predizem cenários futuros através de uma análise de probabilidade,</h4></li>
-                            <li class="item1" style="margin-top: 0px; margin-left: 5%;"><h4>programam intervenções de acordo com a necessidade, e</h4></li>
-                            <li class="item1" style="margin-top: 0px; margin-left: 5%;"><h4>auxiliam no planejamento de extensão de recursos;</h4></li>
-                        </ul>
-                    </li>
-                    <li class="item2"><h3><b><i>self-orchestration</i></b>:</h3>
-                        <ul style="list-style: initial;">
-                            <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4> definem os seus fluxos de execução de maneira dinâmica,</h4></li>
-                            <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4> interpretam cenários e decidem sobre as melhores abordagens, e</h3></li>
-                            <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4> priorizam componentes e funcionalidades de acordo com o contexto;</h4></li>
-                        </ul>
-                    </li>
-                    <li class="item3"><h3><b><i>self-awareness</i></b>:</h3>
-                        <ul style="list-style: initial;">
-                            <li class="item3" style="margin-top: 0px; margin-left: 5%;"><h4> têm uma noção fiel a respeito do seu atual estado,</h4></li>
-                            <li class="item3" style="margin-top: 0px; margin-left: 5%;"><h4> permitem a extração de dados e realização de testes em seus componentes, e</h3></li>
-                            <li class="item3" style="margin-top: 0px; margin-left: 5%;"><h4> monitoram e registram informações referentes às suas utilizações;</h4></li>
-                        </ul>
-                    </li>
-                    <li class="item4"><h3><b><i>self-learning</i></b>:</h3>
-                        <ul style="list-style: initial;">
-                            <li class="item4" style="margin-top: 0px; margin-left: 5%;"><h4> aprendem com diagnósticos e tratativas anteriores,</h4></li>
-                            <li class="item4" style="margin-top: 0px; margin-left: 5%;"><h4> analisam cenários, correlacionam dados e preveem mudanças, e </h3></li>
-                            <li class="item4" style="margin-top: 0px; margin-left: 5%;"><h4> interpretam requisitos de alto nível e traduzem em ações práticas.</h4></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <div id="c2-rede-auto" class="step slide" data-x="12000" data-y="100">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Redes Auto-Organizadas</h2>
-                <ul class="content" style="margin-top:0px; list-style: initial; line-height: 33px;">
-                    <li class="item1"><h3><b>SON - <i>Self-Organizing Network</i></b> - 3GPP:</h3>
-                        <!-- TODO verificar quais elementos o SON se aplica... apenas o core da rede -->
-                        <ul style="list-style: initial;">
-                            <li class="item1" style="margin-top: 0px; margin-left: 5%;"><h4>Automação das
-tarefas de planejamento, configuração, gerenciamento, otimização e cura de <b>Redes de Telecomunicações</b>;</h4></li>
-                            <li class="item1" style="margin-top: 0px; margin-left: 5%;"><h4>Plano de <b>Sinalização</b> separado do plano de <b>Dados</b>;</h4></li>
-                            <li class="item1" style="margin-top: 0px; margin-left: 5%;"><h4>A função de <b>Auto-Estabelecimento</b> tem a função de alocar automaticamente novos recursos de rede (uma <b>eNodeB</b> por exemplo).</h4></li>
-                        </ul>
-                    </li>
-                    <li class="item2"><h3><b>SDN2 - <i>Self-Driving Network</i></b> - Juniper:</h3>
-                        <ul style="list-style: initial;">
-                            <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4>Estratégia de gerenciamento <b>“zero touch”</b> fornecida por meio da automação de processos de <b>operação</b> e <b>administração</b> de redes;</h4></li>
-                            <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4>Propõe redes autônomas através de técnicas como <b>aprendizado de máquina</b>, <b>automação de processos</b>, <b>intenções declarativa</b>, <b>telemetria</b> e <b><i>big data</i></b>  .</h4></li>                            
-                        </ul>
-                    </li>
-                    <li class="item3"><h3><b>IBN - <i>Intent Based Network</i></b> - CISCO:</h3>
-                        <ul style="list-style: initial;">
-                            <li class="item3" style="margin-top: 0px; margin-left: 5%;"><h4>É um paradigma para automação de rede que propõe o uso de <b>intenções declarativas</b> para guiar o comportamento da rede;</h4></li>
-                            <li class="item3" style="margin-top: 0px; margin-left: 5%;"><h4>Descreve <b>“qual”</b> o comportamento esperado da rede e não <b>“como”</b> a rede deve agir para garantir este comportamento.</h4></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <div id="c2-rede-auto-conf" class="step slide" data-x="13500" data-y="100">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Auto-Configuração</h2>
-                <ul class="content" style="margin-top:40px; list-style: initial; line-height: 60px;">
-                    <li class="item1"><h3> Inicialização da rede (<b><i>Bootstrapping</i></b>): infraestrutura e componentes de controle/gerenciamento;</h3></li>
-                    <li class="item2"><h3> <b><i>Plug-and-Play</i></b> de recursos (servidores, <i>switches</i> e componentes);</h3></li>
-                    <li class="item3"><h3> <b>Aprovisionamento</b> de Serviços</h3></li>
-                </ul>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-
-            <div id="c2-sdn" class="step slide" data-x="15000" data-y="100">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Tecnologias Habilitadoras</h2>
-                <div style="text-align:center;  margin-top:4%">
-                    <!-- East bound... plano ortogonal -->
-                    <h3>Software-Defined Networking</h3>
-                    <img src="img/c2/sdn-layers.png" style="width:35%;"/>
-                    <p style="font-size:22px">Fonte: <i>https://www.opennetworking.org/</i></p>
-                </div>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c2-nfv" class="step slide" data-x="16500" data-y="100">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Tecnologias Habilitadoras</h2>
-                <div style="text-align:center;  margin-top:4%">
-                    <h3>Networks Functions Virtualization</h3>
-                    <img src="img/c2/nfv.png" style="width: 38%;"/>
-                    <p style="font-size:22px">Fonte: <i>NFV White Paper</i></p>
-                </div>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            
-            <div id="c2-est1" class="step slide" data-x="18000" data-y="100">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Estado da Arte</h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 40px;">
-                    <h3><b><i>Self-Management</i></b></h3>
-
-                    <li class="item1"><h3><b><i>Autonomic Network Management</i></b> - Tsagkaris et al. (2015): aplica computação autônoma e a técnica de Autonomic Control Loop (ACL) no monitoramento, análise e execução de procedimentos na rede;</h3></li>
-
-                    <li class="item2"><h3><b>SELFNET</b> - Neves et al. (2016b): define elementos sensores e atuadores implantados com a missão de executar ações computacionais autônomas (monitoramento e recuperação);</h3></li>
-
-                    <li class="item3"><h3><b>COGNET</b> - Xu et al. (2016a): propõe uma espécie de extensão para o NFV através dos componentes <i>Data Collector</i>, <i>CogNet Smart Engine</i> e <i>Policy Manager</i></h3></li>
-
-                    <li class="item4"><h3><b>SUPERFLUIDITY</b> - Bianchi et al. (2016): propõe a decomposição de funções e serviços de rede em blocos reutilizáveis implantados na infraestrutura chamados de <i>Reusable Functional Blocks</i> (RFB);</h3></li>
-                    
-                </ul>
-            </div>
-
-            <div id="c2-est2" class="step slide" data-x="19500" data-y="100">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Estado da Arte</h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 40px;">
-                    <h3><b><i>Self-Management</i> de Redes SDN</b></h3>
-
-                    <li class="item1"><h3><b><i>Network Management Framework for SDN</i></b> - Abdallah et al. (2018): propõe um <i>framework</i> para o gerenciamento de redes SDN com funções do FCAPS e introduz um elemento <b>Gerenciador</b>;</h3></li>
-
-                    <li class="item2"><h3><b><i>Policy-based QoS Management Framework for SDN</i></b> - Al-Jawad et al. (2018): propõe componentes para monitoramento de dados de acordo com políticas de QoS, e caso uma violação seja detectada, aplica técnicas de adaptação baseadas na reconfiguração de fluxos;</h3></li>
-                </ul>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c2-est3" class="step slide" data-x="21000" data-y="100">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Estado da Arte</h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 40px;">
-                    <h3><b><i>Self-Configuration</b></h3>
-
-                    <li class="item1"><h3><b><i>Automatic bootstrapping of OpenFlow networks</i></b> - Sharma et al. (2013): se baseia em duas etapas: i) atribuição de um endereço/identificador para o dispositivo e, ii) estabelecimento da sessão OpenFlow entre o dispositivo e o controlador;</h3></li>
-
-                    <li class="item2"><h3><b>InitSDN</b> - Patil, Gokhale e Hakiri (2015): define uma arquitetura com componentes para inicialização de redes SDN, como: <i>Network Discovery & Topology Service</i>, <i>Network Hypervisor</i>, e <i>Control Plane Synchronization</i>;</h3></li>
-
-                    <li class="item3"><h3><b><i>Auto-Configuration of SDN Switches in SDN/Non-SDN Hybrid Network</i></b> - Katiyar et al. (2015) : define processos e componentes capazes de estabelecer fluxo de controle e conectividade em redes híbridas.</h3></li>
-                </ul>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-
-
-            <div id="c3-model" class="step slide" data-x="-1500" data-y="900">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h1>3 - Método da Pesquisa</h1>
-                <h2>Abordagem da Pesquisa:</h3>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 60px;">
-                    <li class="item1"><h3>Natureza <b>Aplicada</b>;</h3></li>
-                    <li class="item1"><h3>Objetivo <b>Exploratório</b>; e,</h3></li>
-                    <li class="item1"><h3>Abordagem <b>Mista</b>.</h3></li>
-                </ol> 
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c3-etarch" class="step slide" data-x="0" data-y="900">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Principais Técnicas:</h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 40px;">
-                    <li class="item1"><h3>Pesquisa Bibliográfica;</h3></li>
-                    <li class="item1"><h3>Pesquisa de Entrevista; </h3></li>
-                    <li class="item1"><h3>Design de Solução;</h3></li>
-                    <li class="item1"><h3>Especificação Formal;</h3></li>
-                    <li class="item1"><h3>Estudo de Caso;</h3></li>
-                    <li class="item1"><h3>Prototipação; e,</h3></li>
-                    <li class="item1"><h3>Experimentação.</h3></li>
-                </ol>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c3-concept" class="step slide" data-x="1500" data-y="900">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Etapas/Atividades:</h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 36px;">
-                    <li class="item1"><h3><b>1 - Etapa Teórica</b></h3></li>
-                    <ul style="list-style: initial;">
-                        <li class="item1" style="margin-top: 0px; margin-left: 5%;"><h4>a) Definição do Problema de Pesquisa;</h4></li>
-                        <li class="item1" style="margin-top: 0px; margin-left: 5%;"><h4>b) Estudo sobre Gerenciamento de Rede;</h4></li>
-                        <li class="item1" style="margin-top: 0px; margin-left: 5%;"><h4>c) Compreensão dos Problemas de Gerenciamento;</h4></li>
-                        <li class="item1" style="margin-top: 0px; margin-left: 5%;"><h4>d) Levantamento do Estado da Arte.</h4></li>
-                    </ul>
-
-                    <li class="item2"><h3><b>2. Etapa de Especificação</b></h3></li>
-                    <ul style="list-style: initial;">
-                        <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4>a) Concepção de Modelos de Gerenciamento;</h4></li>
-                        <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4>b) Proposição de Soluções com base nos Modelos;</h4></li>
-                        <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4>c) Especificação Funcional e Técnica dos Componentes;</h4></li>
-                        <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4>d) Elaboração de Estudo de Caso com foco em Configuração.</h4></li>
-                    </ul>
-
-                    <li class="item3"><h3><b>3. Etapa de Planejamento</b></h3></li>
-                    <ul style="list-style: initial;">
-                        <li class="item3" style="margin-top: 0px; margin-left: 5%;"><h4>a) Escrita do Projeto de Pesquisa;</h4></li>
-                        <li class="item3" style="margin-top: 0px; margin-left: 5%;"><h4>b) Planejamento de Atividades;.</h4></li>
-                    </ul>
-                </ul>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c3-dts1" class="step slide" data-x="3000" data-y="900">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Etapas/Atividades:</h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 36px;">
-                    <li class="item1"><h3><b>4. Etapa de Desenvolvimento</b></h3></li>
-                    <ul style="list-style: initial;">
-                        <li class="item1" style="margin-top: 0px; margin-left: 5%;"><h4>a) Construção do Projeto Estruturante;</h4></li>
-                        <li class="item1" style="margin-top: 0px; margin-left: 5%;"><h4>b) Construção de Protótipo.</h4></li>
-                    </ul>
-
-                    <li class="item2"><h3><b>5. Etapa de Experimentação</b></h3></li>
-                    <ul style="list-style: initial;">
-                        <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4>a) Planejamento de Experimentos e Definição de Cenários;</h4></li>
-                        <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4>b) Execução de Experimentos e Coleta de Resultados;</h4></li>
-                        <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4>c) Análise de Resultados.</h4></li>
-                    </ul>
-
-                    <li class="item3"><h3><b>6. Etapa de Escrita</b></h3></li>
-                    <ul style="list-style: initial;">
-                        <li class="item3" style="margin-top: 0px; margin-left: 5%;"><h4>a) Escrita de Artigos;</h4></li>
-                        <li class="item3" style="margin-top: 0px; margin-left: 5%;"><h4>b) Escrita da Tese de Doutorado.</h4></li>
-                    </ul>
-                </ul>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c3-dts2" class="step slide" data-x="4500" data-y="900">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Método de Experimentação</h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 36px;">
-                    <li class="item1"><h3><b>Estratégia</b></h3></li>
-                    <ul style="list-style: initial;">
-                        <li class="item1" style="margin-top: 0px; margin-left: 5%;"><h4>Protótipo de Prova de Conceito.</h4></li>
-                    </ul>
-
-                    <li class="item2"><h3><b>Cenários</b></h3></li>
-                    <ul style="list-style: initial;">
-                        <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4>1) Inicialização de uma Rede SDN/OpenFlow;</h4></li>
-                        <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4>2) Plug-and-Play de switches OpenFlow;</h4></li>
-                        <li class="item2" style="margin-top: 0px; margin-left: 5%;"><h4>3) Aprovisionamento de serviço para comunicação de VoIP.</h4></li>
-                    </ul>
-
-                    <li class="item3"><h3><b>Resultados</b></h3></li>
-                    <ul style="list-style: initial;">
-                        <li class="item3" style="margin-top: 0px; margin-left: 5%;"><h4>1) Quantitativos: Tempos de Execução em cada Estágio (cenários 1 e 2) e consumo de banda (cenário 3);</h4></li>
-                        <li class="item3" style="margin-top: 0px; margin-left: 5%;"><h4>2) Qualitativo: Agilidade e segurança (cenários 1 e 2) e garantia da qualidade de serviço (cenário 3).</h4></li>
-                    </ul>
-                </ul>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-<!-- 
-            <div id="c3-dts3" class="step slide" data-x="6000" data-y="900">
-                <h2>Distribuíção de DTSAs</h2>
-                <div style="text-align:center;  margin-top:2%">
-                    <img src="img/c3/dts-hierarq.png" style="width: 80%;"/>
-                </div>
-            </div>
-
-            <div id="c3-workspace1" class="step slide" data-x="7500" data-y="900">
-                <h2>Workspace</h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 46px;">
-                    <li class="item1"><h3>Grupo de <b>comunicação</b> naturalmente <i>multicast</i> com requisitos bem definidos, título identificador, nível de visibilidade e de privacidade.</h3></li>
-                    <li class="item2"><h3>Canal <b><i>multi-end</i></b> ao invés do <b>fim-a-fim</b>, baseado no conceito de <b>barramento lógico</b>.</h3></li>
-                </ul>
-                <div class="item3" style="width: 100%; text-align: center;">
-                    <h3 style="margin: 0 auto; margin-top: 8%; text-align: justify; width: 60%;"><b style="font-size: 50px;">"</b>Usuários buscam pelo <b>conteúdo</b> (tema), e não pela <b>infraestrutura</b>, dessa maneira o <b>workspace</b> é encarado como um <b>fim</b> e não como um <b>meio</b>.<b style="font-size: 50px;">"</b></h3>
-                </div>
-            </div>
-
-            <div id="c3-workspace2" class="step slide" data-x="9000" data-y="900">
-                <h2>Exemplo de Workspace</h2>
-                <div style="text-align:center;  margin-top:2%">
-                    <img src="img/c3/workspace-view.png" style="width: 65%;"/>
-                </div>
-            </div>
-
-            <div id="c3-layer" class="step slide" data-x="10500" data-y="900">
-                <h2>Camadas e Protocolos de Comunicação</h2>
-                <div style="text-align:center;  margin-top:4%">
-                    <img src="img/c3/protocol_stack2.png" style="width: 30%;"/>
-                </div>
-            </div> -->
-
-            <div id="c4" class="step slide" data-x="-1500" data-y="1700">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h1>4 - Apresentação do modelo <b>IBSM</b>, Visão Geral da Arquitetura <b>SONAr</b>, e Especificação de uma Solução de <b>Auto-Configuração</b></h1>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 70px;">
-                    <li class="item1"><h3><b>IBSM</b>: <b>Modelo</b> de <b>Representação</b> e <b>Aprovisionamento</b> de <b>Serviços</b></h3></li>
-                    <li class="item2"><h3><b>SONAr</b>: <b>Arquitetura</b> para a provisão de <b>Redes Auto-Organizadas</b></h3></li>
-                    <!--<li class="item3"><h3><b><i>Self-Configuration</i></b>: Especificação e implementação de <i>"prova de conceito"</i> para provisão da propriedade de auto-configuração com <b>SONAr</b> e <b>IBSM</b>.</h3></li>-->
-                </ul>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c4-net" class="step slide" data-x="0" data-y="1700">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>IBSM - Intent-Based Service Model</h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 70px;">
-                    <li class="item1"><h3>Qual o tipo de comunicação será realizado e qual a motivação da comunicação?</h3></li>
-                    <li class="item2"><h3>Como a comunicação deve ser tratada e quais os requisitos da comunicação devem
-ser contemplados?</h3></li>
-                    <li class="item3"><h3>A qual comunicação o serviço se aplica e em qual contexto ele deve ser executado?</h3></li>
-                </ul>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-
-            <div id="c4-dl" class="step slide" data-x="1500" data-y="1700">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>IBSM-SRM - Service Representation Model</h2>
-                 <ul class="content" style="margin-top:20px; list-style: initial; line-height: 70px;">
-                    <li class="item1"><h3>Modelo de Representação de Serviços baseados em três partes lógicas: <b>função</b>, <b>políticas</b> e <b> filtros</b>.</h3></li>
-                </ul>
-                <div style="text-align:center;  margin-top:4%">
-                    <img src="img/c4/srm1.png" style="width: 55%;"/>
-                </div>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c4-dts1" class="step slide" data-x="3000" data-y="1700">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>IBSs - Intent-Based Services</h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 70px;">
-                    <li class="item1"><h3>Modificadores: <b>Abstratos</b>,<b>Concretos</b> e <b>Finais</b></h3></li>
-                    <li class="item1"><h3>Granularidade: <b>Subserviço</b> e <b>Superserviço</b></h3></li>
-                    <li class="item1"><h3>Aprovisionamento: <b>Pré-configurados</b>, <b>Sob-demanda</b> e <b>Programados</b></h3></li>
-                    <li class="item1"><h3>Representação: <b>Formal</b> (FDS - <i>Formally Described Service</i>), <b>Comportamental</b> (BIS - <i>Behavior Inferred Service</i>) e <b>Natural</b> (NDS - <i>Natural Described Service</i>)</h3></li>
-                </ul>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c4-dts2" class="step slide" data-x="4500" data-y="1700">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>IBSM-SPM - Service Provisioning Model</h2>
-                <div style="text-align:center;  margin-top:4%">
-                    <h4> Etapas de Aprovisionamento </h4>
-                    <img src="img/c4/spm1.png" style="width: 65%;"/>
-                    <br/>
-                    <h4> Elementos Conceituais de Aprovisionamento </h4>
-                    <img src="img/c4/spm2.png" style="width: 35%;"/>
-                </div>
-            </div>
-
-            <div id="c4-aut" class="step slide" data-x="6000" data-y="1700">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Requisitos Comunicacionais</h2>
-                <table>
-                    <tr>
-                        <td>
-                            <ul class="content" style="margin-top:20px; list-style: initial; line-height: 40px;">
-                                <h3>Requisitos Comunicacionais <b>Funcionais</b></h3>
-                                <li class="item1"><h3><b>RF01</b>: <i>unicast intra-domain</i></h3></li>
-                                <li class="item1"><h3><b>RF02</b>: <i>unicast inter-domain</i></h3></li>
-                                <li class="item1"><h3><b>RF03</b>: <i>multicast intra-domain</i></h3></li>
-                                <li class="item1"><h3><b>RF04</b>: <i>multicast inter-domain</i></h3></li>
-                                <li class="item1"><h3><b>RF05</b>: <i>broadcast</i></h3></li>
-                                <li class="item1"><h3><b>RF06</b>: <i>anycast intra-domain</i></h3></li>
-                                <li class="item1"><h3><b>RF07</b>: <i>anycast inter-domain</i></h3></li>
-                            </ul>
-                        </td>
-                        <td>
-                            <h3>Classificação por <b>abrangência</b> da comunicação</h3><br/>
-                            <img src="img/c4/intrainter.png" style="width: 55%;"/><br/><br/>
-
-                            <h3>Classificação por <b>tipo</b> de comunicação</h3><br/>
-                            <img src="img/c4/cast.png" style="width: 100%;"/>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
-            <div id="c4-app" class="step slide" data-x="7500" data-y="1700">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Requisitos Comunicacionais</h2>
-                <table>
-                    <tr>
-                        <h3 style="margin-top:20px;">Requisitos Comunicacionais <b>Não Funcionais</b></h3>
-                        <td style="width: 600px;">
-                            <ul class="content" style="margin-top:20px; list-style: initial; line-height: 38px;">
-                                <li class="item1"><h3><b>RNF01</b>: alocação de banda <b>mínima</b></h3></li>
-                                <li class="item1"><h3><b>RNF02</b>: alocação de banda <b>limitada</b></h3></li>
-                                <li class="item1"><h3><b>RNF03</b>: alocação de banda <b>variável</b></h3></li>
-
-                                <li class="item1"><h3><b>RNF04</b>: utilização limitada por <b>tempo</b></h3></li>
-                                <li class="item1"><h3><b>RNF05</b>: utilização limitada por <b>dados</b></h3></li>
-                                <li class="item1"><h3><b>RNF06</b>: utilização limitada por <b>custo</b></h3></li>
-
-                                <li class="item1"><h3><b>RNF07</b>: canal <b>livre de erros</b></h3></li>
-                                <li class="item1"><h3><b>RNF08</b>: canal com <b>latência mínima</b></h3></li>
-
-                            </ul>
-                        </td>
-                        <td>
-                            <ul class="content" style="margin-top:20px; list-style: initial; line-height: 38px;">
-                                <li class="item1"><h3><b>RNF09</b>: canal com <b>custo mínimo</b></h3></li>
-                                <li class="item1"><h3><b>RNF10</b>: canal <b>seguro</b></h3></li>
-                                <li class="item1"><h3><b>RNF11</b>: canal <b>otimizado</b></h3></li>
-
-                                <li class="item1"><h3><b>RNF12</b>: restrição de <b>dispositivos</b></h3></li>
-                                <li class="item1"><h3><b>RNF13</b>: restrição de <b>aplicações</b></h3></li>
-                                <li class="item1"><h3><b>RNF14</b>: restrição de <b>conteúdos</b></h3></li>
-                                <li class="item1"><h3><b>RNF15</b>: restrição de <b>tecnologias</b></h3></li>
-                                <li class="item1"><h3><b>RNF16</b>: restrição <b>geográfica</b></h3></li>
-                            </ul>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
-            <!-- <div id="c4-app-reqnf2" class="step slide" data-x="9000" data-y="1700">
-                <h2>Requisitos Comunicacionais</h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 60px;">
-                    <h3 style="margin-top:20px;">Classificação de Requisitos Não-Funcionais</h3>
-                    <li class="item1"><h3>Controle de <b>alocação</b>: RNF01, RNF02, RNF03</h3></li>
-                    <li class="item2"><h3>Controle de <b>uso</b>: RNF04, RNF05, RNF06</h3></li>
-                    <li class="item3"><h3>Controle de <b>canal</b>: RNF07, RNF08, RNF09, RNF10, RNF11</h3></li>
-                    <li class="item4"><h3>Controle de <b>acesso</b>: RNF12, RNF13, RNF14, RNF15, RNF16</h3></li>
-                </ul>
-            </div> -->
-
-            <div id="c4-app-sonar1" class="step slide" data-x="9000" data-y="1700">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2><b>SONAr</b> - <i>Self-Organizing Network Architecture</i></h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 60px;">
-                    <h3 style="margin-top:20px;">Entidades de <i>Self-Management</i></h3>
-                    <li class="item1"><h3><b>auto-organizadoras</b>: <i>self-configuration</i>, <i>self-healing</i>, <i>self-optimization</i>, <i>self-protection</i>, <i>self-planning</i> e <i>self-orchestration</i></h3></li>
-                    <li class="item2"><h3><b>auto-aprendizado</b>: <i>self-learning</i></h3></li>
-                    <li class="item3"><h3><b>auto-coletoras</b>: <i>self-awareness</i></h3></li>
-                </ul>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c4-app-sonar2" class="step slide" data-x="10500" data-y="1700">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2 style="margin-top:20px;">Fluxo básico de execução das Entidades de <i>Self-Management</i></h3>
-                <img src="img/c4/fluxobasico.png" style="width: 80%; margin-top:40px;"/>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c4-app-sonar3" class="step slide" data-x="12000" data-y="1700">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2 style="margin-top:20px;">Modelo Camadas SONAr</h3>
-                <img src="img/c4/camadas.png" style="width: 80%; margin-top:40px;"/>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c4-app-sonar4" class="step slide" data-x="13500" data-y="1700">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <!-- TODO : verificar componentes. Conversar com o professor -->
-                <h2>Diagrama de Componentes <b>SONAr</b></h3>
-                <img src="img/c4/componentes.png" style="width: 65%; margin-top:20px; margin-left:15%;"/>
-            </div>
-
-            <div id="c4-app-sonar5" class="step slide" data-x="15000" data-y="1700">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2><b>SOEs</b> - <i>Self-Organizing Entities</i></h3>
-                <img src="img/c4/comporg.png" style="width: 90%; margin-top:100px; margin-left:5%;"/>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-
-            <div id="c4-app-sonar6" class="step slide" data-x="16500" data-y="1700">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2><b>SLEs</b> - <i>Self-Learning Entities</i></h3>
-                <img src="img/c4/complearn.png" style="width: 90%; margin-top:100px; margin-left:5%;"/>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c4-app-sonar7" class="step slide" data-x="18000" data-y="1700">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2><b>SCoEs</b> - <i>Self-Collecting Entities</i></h3>
-                <img src="img/c4/compcol.png" style="width: 90%; margin-top:100px; margin-left:5%;"/>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-             <div id="c4-app-sonar9" class="step slide" data-x="19500" data-y="1700">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Componentes Auxiliares</i></h3>
-                <img src="img/c4/compaux.png" style="width: 90%; margin-top:100px; margin-left:5%;"/>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-
-            <div id="c4-self-conf1" class="step slide" data-x="21000" data-y="1700">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Auto-Configuração através do <b>SONAr/IBSM</b></h2>
-                <img src="img/c4/selfconfcomp.png" style="width: 90%; margin-top:40px; margin-left:5%;"/>
-            </div>
-
-            <!-- <div id="c4-self-conf2" class="step slide" data-x="24000" data-y="1700">
-                <h2>1 - Fluxo de <b>Inicialização da Rede</b></h2>
-                <img src="img/c4/flow-boot.png" style="margin-top:40px; margin-left:5%;"/>
-            </div>
-
-            <div id="c4-self-conf3" class="step slide" data-x="26500" data-y="1700">
-                <h2>1.1 - Fluxo de <b>Inicialização dos Componentes de Gerenciamento e de Controle</b></h2>
-                <img src="img/c4/flow-boot-comp.png" style="margin-top:40px; margin-left:5%;"/>
-            </div>
-
-            <div id="c4-self-conf4" class="step slide" data-x="28000" data-y="1700">
-                <h2>1.1.1 - Fluxo de <b>Aprovisionamento de Componentes</b></h2>
-                <img src="img/c4/flow-boot-comp-aprov.png" style="margin-top:40px; margin-left:5%;"/>
-            </div>
-
-            <div id="c4-self-conf5" class="step slide" data-x="29500" data-y="1700">
-                <h2>1.2 - Fluxo de <b>Descoberta inicial e configuração de recursos</b></h2>
-                <img src="img/c4/flow-boot-disc.png" style="margin-left:5%;"/>
-            </div>
-
-            <div id="c4-self-conf6" class="step slide" data-x="31000" data-y="1700">
-                <h2>1.2.1 - Fluxo de <b>Distribuíção de Controle e Gerenciamento</b></h2>
-                <img src="img/c4/flow-boot-dist.png" style="margin-top:40px; margin-left:5%;"/>
-            </div>
-
-            <div id="c4-self-conf7" class="step slide" data-x="32500" data-y="1700">
-                <h2>1.3 - Fluxo de <b>Aprovisionamento Inicial de Serviços</b></h2>
-                <img src="img/c4/flow-boot-aprov.png" style="margin-top:40px; margin-left:5%;"/>
-            </div>
-
-            <div id="c4-self-conf8" class="step slide" data-x="34000" data-y="1700">
-                <h2>2 - Fluxo de <b>Plug-and-Play de Recursos</b> - pt.1</h2>
-                <img src="img/c4/flow-pnp-p1.png" style="margin-left:5%;"/>
-            </div>
-
-            <div id="c4-self-conf9" class="step slide" data-x="35500" data-y="1700">
-                <h2>2 - Fluxo de <b>Plug-and-Play de Recursos</b> - pt.2</h2>
-                <img src="img/c4/flow-pnp-p2.png" style="margin-top:40px; margin-left:5%;"/>
-            </div>
-
-            <div id="c4-self-conf10" class="step slide" data-x="37000" data-y="1700">
-                <h2>3 - Fluxo de <b>Configuração de Serviços</b></h2>
-                <img src="img/c4/flow-serv.png" style="margin-left:5%;"/>
-            </div> -->
-
-             <!-- <div id="c5" class="step slide" data-x="-1500" data-y="2500">
-                <h1>5 - Aspectos de Projeto e Implementação do Protótipo</h1>
-                <h2 style="margin-top: 20px;">Servidor <b>SONAr</b></h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 40px;">
-                    <li class="item1"><h3><b>ABM</b> - <i>Auto-Boot Manager</i>.</h3></li>
-                    <li class="item2"><h3><b>C-NIM</b> - <i>Containerized Network Infrastructure Manager</i>.</h3></li>
-                    <li class="item3"><h3><b>DRCP</b> - <i>Dynamic Resource Configuration Provider</i>.</h3></li>
-                    <li class="item4"><h3><b>CP</b> - <i>Container Provider</i>.</h3></li>
-                    <li class="item5"><h3><b>RDP</b> - <i>Resource Data Provider</i>.</h3></li>
-                    <li class="item6"><h3><b>NDP</b> - <i>Neighbor Discovery Provider</i>.</h3></li>
-                </ul>
-            </div>
-
-            <div id="c5-comp" class="step slide" data-x="0" data-y="2500">
-                <h2>Componentes <b>SONAr</b></h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 40px;">
-                    <li class="item1"><h3><b>NDB</b> - <i>Network Database</i>.</h3></li>
-                    <li class="item2"><h3><b>NEM</b> - <i>Network Event Manager</i>.</h3></li>
-                    <li class="item3"><h3><b>SCE</b> - <i>Self-Configuration Entity</i>.</h3></li>
-                    <li class="item4"><h3><b>TSCoE</b> - <i>Topology Self-Collector Entity</i>.</h3></li>
-                    <li class="item5"><h3><b>CPI</b> - <i>Control Plane Interceptor</i>.</h3></li>
-                    <li class="item6"><h3><b>NSB</b> - <i>Network Service Broker</i>.</h3></li>
-                </ul>
-            </div>
-
-            <div id="c5-bib" class="step slide" data-x="1500" data-y="2500">
-                <h2>Bibliotecas <b>SONAr</b></h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 40px;">
-                    <li class="item1"><h3><b>NDB Client</b> - <i>Network Database Client API/Broker</i>.</h3></li>
-                    <li class="item2"><h3><b>NEM Client</b> - <i>Network Event Manager Client API/Broker</i>.</h3></li>
-                    <li class="item3"><h3><b>NIM Client</b> - <i>Network Infrastructure Manager Client API/Broker</i>.</h3></li>
-                    <li class="item4"><h3><b>SONAr Model</b>.</h3></li>
-                    <li class="item5"><h3><b>SONAr Util</b>.</h3></li>
-                </ul>
-            </div> -->
-
-
-            <div id="c6-exp" class="step slide" data-x="-1500" data-y="3300">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h1>5 - Experimentos e Análise dos Resultados</h1>
-                <h2 style="margin-top: 20px;">Método de Avaliação</h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 40px;">
-                    <li class="item1"><h3>Definição de cenários de testes;</h3></li>
-                    <li class="item1"><h3>Desenvolvimento de protótipos;</h3></li>
-                    <li class="item1"><h3>Construção de uma infraestrutura de rede emulada;</h3></li>
-                    <li class="item1"><h3>Realização dos experimentos e coleta de dados; e,</h3></li>
-                    <li class="item1"><h3>Interpretação e análise dos resultados.</h3></li>
-                </ul>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c6-res" class="step slide" data-x="0" data-y="3300">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Infraestrutura</h2>
-                 <ul class="content" style="margin-top:20px; list-style: initial; line-height: 40px;">
-                    <li class="item1"><h3>Servidor de testes com Ubuntu 18.10, 16GB de RAM, 40GB de HD, 8 núcleos 2GHz;</h3></li>
-                    <li class="item1"><h3>Rede emulada com GNS3 com um <i>appliance</i> de <i>switch</i> customizado;</h3></li>
-                    <li class="item1"><h3>Servidor SONAr com Ubuntu Server 16.04, 8194GB de RAM, 22GB de HD, 8 núcleos 2GHz ;</h3></li>
-                    <li class="item1"><h3>Componentes "conteinerizados" com <i>Docker</i>;</h3></li>
-                    <li class="item1"><h3>Redes com 1, 2, 4, 8, 16, 32, 64 e 128 <i>switches</i>;</h3></li>
-                    <li class="item1"><h3>Aplicações de coleta de resultados específicas para cada experimento.</h3></li>
-                </ul>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c6-pub" class="step slide" data-x="1500" data-y="3300">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-               <h2>Infraestrutura</h2>
-                <img src="img/c5/topologia.png" style="margin-left:5%;"/>
-            </div>
-
-            <div id="c6-res1" class="step slide" data-x="3000" data-y="3300">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Cenário 1: Inicialização de uma Rede SDN/OpenFlow</h2>
-                 <ul class="content" style="margin-top:20px; list-style: initial; line-height: 38px;">
-                    <li class="item1"><h3>Experimento 1 - Inicialização - Sem Interceptor - Configuração da Raiz
-para as Folhas;</h3></li>
-                    <li class="item1"><h3>Experimento 2 - Inicialização - Sem Interceptor - Configuração das Folhas
-para a Raiz;</h3></li>
-                    <li class="item1"><h3>Experimento 3 - Inicialização - Com Interceptor - Configuração das Folhas
-para a Raiz.</h3></li>
-                    <br/>
-
-                    <li class="item2"><h3>Passo 1 - Criar a topologia de rede através da ferramenta de emulação;</h3></li>
-                    <li class="item2"><h3>Passo 2 - Iniciar componente de Auto-inicialização da SONAr;</h3></li>
-                    <li class="item2"><h3>Passo 3 - Executar uma aplicação de coleta de resultados;</h3></li>
-                    <li class="item2"><h3>Passo 4 - Iniciar todos os elementos de rede da topologia;</h3></li>
-                    <li class="item2"><h3>Passo 5 - Aguardar a execução da inicialização da rede e coletar os resultados.</h3></li>
-                </ul>
-            </div>
-
-            <div id="c6-res11" class="step slide" data-x="4500" data-y="3300">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Resultados Cenário 1: Inicialização de uma Rede SDN/OpenFlow</h2>
-                <h5 style="margin-top:40px;">Experimento 1 : Inicialização da Rede - Sem Interceptor - Configuração da Raiz para as Folhas.</h5>
-                <img src="img/c5/res-cen1-exp1.png" style="margin-left:5%;"/>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c6-res12" class="step slide" data-x="6000" data-y="3300">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Resultados Cenário 1: Inicialização de uma Rede SDN/OpenFlow</h2>
-                <h5 style="margin-top:40px;">Experimento 2 : Inicialização da Rede - Sem Interceptor - Configuração das Folhas
-para a Raiz.</h5>
-                <img src="img/c5/res-cen1-exp2.png" style="margin-left:5%;"/>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c6-res13" class="step slide" data-x="7500" data-y="3300">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Resultados Cenário 1: Inicialização de uma Rede SDN/OpenFlow</h2>
-                <h5 style="margin-top:40px;">Comparação entre os Experimentos 1 e 2 : ordem de Configuração.</h5>
-                <img src="img/c5/res-cen1-exp1e2.png" style="margin-left:5%;"/>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c6-res14" class="step slide" data-x="9000" data-y="3300">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Resultados Cenário 1: Inicialização de uma Rede SDN/OpenFlow</h2>
-                <h5 style="margin-top:40px;">Experimento 3 : Inicialização da Rede - Com Interceptor - Configuração das Folhas para a Raiz.</h5>
-                <img src="img/c5/res-cen1-exp3.png" style="margin-left:5%;"/>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c6-res15" class="step slide" data-x="10500" data-y="3300">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Resultados Cenário 1: Inicialização de uma Rede SDN/OpenFlow</h2>
-                <h5 style="margin-top:40px;">Comparação entre os Experimentos 2 e 3 : uso do CPI.</h5>
-                <img src="img/c5/res-cen1-exp2e3.png" style="margin-left:5%;"/>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c6-res2" class="step slide" data-x="12000" data-y="3300">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Cenário 2: <i>Plug-and-Play</i> de Dispositivos de Comutação</h2>
-                 <ul class="content" style="margin-top:20px; list-style: initial; line-height: 38px;">
-                    <li class="item1"><h3>Experimento 1 - <i>Plug-and-Play</i> - Sem Interceptor;</h3></li>
-                    <li class="item1"><h3>Experimento 2 - <i>Plug-and-Play</i> - Com Interceptor;</h3></li>
-                    <li class="item1"><h3>Experimento 3 - <i>Plug-and-Play</i> - Com Interceptor - Com "<i>delayed discovery</i>".</h3></li>
-                    <br/>
-
-                    <li class="item2"><h3>Passo 1 - Criar a topologia de rede através da ferramenta de emulação;</h3></li>
-                    <li class="item2"><h3>Passo 2 - Iniciar componente de Auto-inicialização da SONAr;</h3></li>
-                    <li class="item2"><h3>Passo 3 - Iniciar todos os elementos de rede da topologia;</h3></li>
-                    <li class="item2"><h3>Passo 4 - Executar uma aplicação de coleta de resultados;</h3></li>
-                    <li class="item2"><h3>Passo 5 - Aprovisionar um novo <i>switch</i> na topologia;</h3></li>
-                    <li class="item2"><h3>Passo 6 - Aguardar a execução do Plug-and-Play e coletar os resultados.</h3></li>
-                </ul>
-            </div>
-
-
-            <div id="c6-res21" class="step slide" data-x="13500" data-y="3300">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Cenário 2: <i>Plug-and-Play</i> de Dispositivos de Comutação</h2>
-                <h5 style="margin-top:40px;">Experimento 1 - <i>Plug-and-Play</i> - Sem Interceptor.</h5>
-                <img src="img/c5/res-cen2-exp1.png" style="margin-left:5%;"/>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c6-res22" class="step slide" data-x="15000" data-y="3300">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Cenário 2: <i>Plug-and-Play</i> de Dispositivos de Comutação</h2>
-                <h5 style="margin-top:40px;">Experimento 2 - <i>Plug-and-Play</i> - Com Interceptor.</h5>
-                <img src="img/c5/res-cen2-exp2.png" style="margin-left:5%;"/>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c6-res23" class="step slide" data-x="16500" data-y="3300">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Cenário 2: <i>Plug-and-Play</i> de Dispositivos de Comutação</h2>
-                <h5 style="margin-top:40px;">Experimento 3 - <i>Plug-and-Play</i> - Com Interceptor - Com "<i>delayed discovery</i>".</h5>
-                <img src="img/c5/res-cen2-exp3.png" style="margin-left:5%;"/>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <div id="c6-res3" class="step slide" data-x="18000" data-y="3300">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Cenário 3: Aprovisionamento de serviço para comunicação de VoIP</h2>
-                 <ul class="content" style="margin-top:20px; list-style: initial; line-height: 38px;">
-                    <li class="item1"><h3>Passo 1 - Criar a topologia de rede através da ferramenta de emulação;</h3></li>
-                    <li class="item1"><h3>Passo 2 - Iniciar componente de Auto-inicialização da SONAr;</h3></li>
-                    <li class="item1"><h3>Passo 3 - Iniciar todos os elementos de rede da topologia;</h3></li>
-                    <li class="item1"><h3>Passo 4 - Aprovisionar quatro <i>hosts</i> e ligá-los à topologia;</h3></li>
-                    <li class="item1"><h3>Passo 5 (exclusivo para a abordagem SONAr) - Aprovisionar um serviço de comunicação via barramento utilizando os IP’s dos Hosts 1 e 3, e com política de garantia de banda de 64Kbps;</h3></li>
-                    <li class="item1"><h3>Passo 6 - Executar uma aplicação receptora para a comunicação de VoIP no host3 e uma aplicação enviadora no host1 com taxa de 64Kbps por 50 segundos;</h3></li>
-                    <li class="item1"><h3>Passo 7 (simultaneamente ao Passo 5) - Aguardar 20 segundos e executar uma aplicação receptora de tráfego do tipo Torrent no host4 e uma enviadora no host2 com taxa de 1Gbps por 30 segundos</h3></li>
-                    <li class="item1"><h3>Passo 8 - Coletar os dados nas aplicações receptoras hospedadas nos Hosts 3 e 4.</h3></li>
-                </ul>
-            </div>
-
-            <div id="c6-res31" class="step slide" data-x="19500" data-y="3300">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Cenário 3: Aprovisionamento de serviço para comunicação de VoIP</h2>
-                <h5 style="margin-top:40px;">Experimento 1 - Sem <b>SONAr</b> e sem <b>QoS</b>.</h5>
-                <img src="img/c5/res-cen3-exp1.png" style="margin-left:5%; height:80%;"/>
-            </div>
-
-            <div id="c6-res32" class="step slide" data-x="21000" data-y="3300">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Cenário 3: Aprovisionamento de serviço para comunicação de VoIP</h2>
-                <h5 style="margin-top:40px;">Experimento 1 - Com <b>SONAr</b> e com <b>QoS</b>.</h5>
-                <img src="img/c5/res-cen3-exp2.png" style="margin-left:5%; height:80%;"/>
-            </div>
-
-            <div id="c7-conc" class="step slide" data-x="-1500" data-y="4100">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h1>6 - Conclusão</h1>
-                <ul class="content" style="margin-top:10px; list-style: initial; line-height: 36px;">
-                    <li class="item1"><h3>As <b>Redes Futuras</b> não poderão ser gerenciadas com as estratégias atuais</h3></li>
-                    <li class="item1"><h3>A <b>Computação Autônoma</b> pode ser utilizada para a concepção de <b>Redes Auto-Gerenciáveis</b></h3></li>
-                    <li class="item1"><h3><b>Serviços</b> podem ser especificadas por intenções descritas ou detectadas</h3></li>
-                    <li class="item1"><h3>O <b>SONAr</b> define uma nova <b>Arquitetura</b> para o <b>Plano de Gerenciamento</b></h3></li>
-                    <li class="item1"><h3>As <b>Entidades SONAr</b> são capazes de prover propriedades de auto-organização para as Redes de Computadores</h3></li>
-                    <li class="item1"><h3>Este trabalho demonstra que <b>SONAr</b> pode ser utilizado para automação das operações da propriedade de <b><i>Self-Configuration</i></b></h3></li>
-                </ul>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <!-- <div id="c7-res" class="step slide" data-x="0" data-y="4100">
-                <h2>Resultados Experimentais</h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 38px;">
-                    <li class="item1"><h3>Viabilidade da solução proposta pelo <b>SONAr</b>;</h3></li>
-                    <li class="item2"><h3>Automação e otimização da operação de <b>Inicialização da Rede</b>;</h3></li>
-                    <li class="item3"><h3>Uso do <b>CPI</b> adiciona um baixo <i>overhead</i> que é compensado pela melhoria no tempo gasto nas operações de inicialização e <i>plug-and-play</i> de dispositivos (<b style="color: blue;">Quantitativo</b>);</h3></li>
-                    <li class="item4"><h3>Maior flexibilidade da rede para o aprovisionamento de serviços de comunicação (<b style="color: red;">Qualitativo</b>);</h3></li>
-                    <li class="item5"><h3>O uso da técnica de "<i>Delayed Discovery</i>" torna o processo de plug-and-play mais rápido (<b style="color: blue;">Quantitativo</b>);</h3></li>
-                    <li class="item6"><h3>Configurar fluxos de controle em <i>switches</i> <b>OpenFlow</b> é mais eficiente quando começa-se dos nós mais distantes (<b style="color: blue;">Quantitativo</b>);</h3></li>
-                    <li class="item7"><h3>As funções e componentes de rede abstraídos como contêineres (<i>Docker</i>) são mais fácilmente aprovisionadas e utilizam melhor os recursos disponíveis (<b style="color: red;">Qualitativo</b>).</h3></li>
-                </ul>
-            </div> -->
-
-<!--             <div id="c7-pub" class="step slide" data-x="1500" data-y="4100">
-                <h2>Objetivos Alcançados</h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 42px;">
-                    <li class="item1"><h3>Modelo de Representação e Aprovisionamento de Intent-based Services - <b>IBSM</b>;</h3></li>
-                    <li class="item2"><h3>Framework para concepção de Redes Auto-Gerenciáveis - <b>SONAr</b>;</h3></li>
-                    <li class="item3"><h3>Levantamento de Requisitos Comunicaionais das aplicações atuais e utilização de uma estratégia de "<i>building blocks</i>";</h3></li>
-                    <li class="item4"><h3>Proposição de uma solução para a automação das operações de <i>Self-Configuration</i>;</h3></li>
-                    <li class="item5"><h3>Implementação de uma versão inicial do <b>SONAr</b> com suporte ao <b>IBSM</b> e foco em <b>Self-Configuration</b>;</h3></li>
-                    <li class="item6"><h3>Realização de Experimentos e comprovação de Resultados com ganhos Qualitativos e Quantitativos.</h3></li>
-                </ul>
-            </div> -->
-
-            <div id="c7-obj" class="step slide" data-x="0" data-y="4100">
-                 <div class="cabecalho">
-                    <img class="mehar" src="img/mehar.jpeg"/> 
-                    <img class="ufu" src="img/ufu.jpeg"/> 
-                </div>
-                <h2>Publicações</h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 60px;">
-                    <li class="item1"><h3><i>Bootstrapping and Plug-and-Play Operations on Software Defined Networks: A Case Study on Self-Configuration Using the SONAr Architecture</i> - <b>CLOSER 2020</b></h3></li>
-                    <li class="item2"><h3><i>Network Self-Configuration for Edge Elements Using Self-Organizing Networks Architecture (SONAr)</i> - <b>CLOSER 2020</b></h3></li>
-                    <li class="item3"><h3><i>A self-healing platform for the control and management planes communication in softwarized and virtualized networks</i> - <b>CLOSER 2020</b></h3></li>
-                    <li class="item4"><h3>(Artigo a ser submetido para o IEEE TNSM)</b></h3></li>
-                </ul>
-                <div class="rodape">
-                    <img src="img/background.jpeg"/> 
-                </div>
-            </div>
-
-            <!-- <div id="c7-persp" class="step slide" data-x="4500" data-y="4100">
-                <h2>Perspectivas Futuras</h2>
-                <ul class="content" style="margin-top:20px; list-style: initial; line-height: 60px;">
-                    <li class="item1"><h3>Evolução da solução proposta para outros tipos de redes;</h3></li>
-                    <li class="item2"><h3>Implementação de Entidades responsáveis por outras propriedades de auto-gerenciamento;</h3></li>
-                    <li class="item3"><h3>Adequação da solução para o atendimento de requisitos <i>carrier-grade</i></h3></li>
-                </ul>
-            </div> -->
-
-            <div class="step slide" data-x="0" data-y="4900">
-                <div style="text-align: center;">
-                    <q class="quote"> Obrigado </q>
-                    <br/>
-                    <p> Maurício Amaral Gonçalves </p>
-                    <p> mauricioamaralg@ufu.com </p>
-                </div>
-            </div>
-        </div>
-
-        <script>
-            if ("ontouchstart" in document.documentElement) { 
-                document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
-            }
-
-            var videoEnter = false;
-            var video=document.getElementById("video"); 
-            window.addEventListener('impress:stepenter', function(e) {
-                if(e.srcElement.id === 'video-slide'){
-                    video.play();
-                    videoEnter = true;
-                }
-            });
-            window.addEventListener('impress:stepleave', function() {
-                if(videoEnter){
-                    video.pause();
-                    video.currentTime = 0;
-                    videoEnter = false;
-                }
-            });
-        </script>
-        <script src="impress.js"></script>
-        <script>impress().init();</script>
-    </body>
+              </div>
+            </div>
+            <!--end .grid -->
+          </div>
+        </section>
+        <section class="aligncenter">
+          <!-- .wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h2><strong>Ready to Start?</strong> </h2>
+            <p class="text-intro">Create your own presentation instantly. <br>120+ premium slides ready to use.</p>
+            <p>
+              <a href="https://webslides.tv/webslides-latest.zip" class="button" title="Download WebSlides">
+                <svg class="fa-cloud-download">
+                  <use xlink:href="#fa-cloud-download"></use>
+                </svg>
+                Free Download
+              </a>
+              <span class="try">
+                <a href="https://www.paypal.me/jlantunez/8" title="Thanks :)">
+                  <svg class="fa-paypal">
+                    <use xlink:href="#fa-paypal"></use>
+                  </svg>
+                  Pay what you want.
+                </a>
+              </span>
+            </p>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section class="slide-bottom">
+          <div class="wrap">
+            <div class="content-right text-serif">
+              <h2>
+                <strong>Thanks.</strong>
+                <a target="_blank" title="Share on Twitter" href="https://twitter.com/intent/tweet?text=Finally,%20everything%20you%20need%20to%20make%20HTML%20presentations%20in%20a%20fast/beautiful%20way.%20@WebSlides%20=%20Good%20karma%20&mdash;%20https://webslides.tv">
+                  <svg class="fa-twitter">
+                    <use xlink:href="#fa-twitter"></use>
+                  </svg>
+                </a>
+              </h2>
+              <p>People share content that makes them feel inspired. WebSlides is a very effective way to engage young audiences, customers, and teams.</p> 
+              <p>Best,<br> <a href="https://twitter.com/jlantunez">@jlantunez</a>, <a href="https://twitter.com/belelros">@belelros</a>, and <a href="https://twitter.com/luissacristan">@luissacristan</a>.</p>
+            </div>
+            <!-- .end .content-right -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+      </article>
+      <!-- end article -->
+    </main>
+    <!-- end main -->
+
+   <!-- A global footer
+
+     <footer role="contentinfo">
+      <div class="wrap">
+        <p>An <a href="https://github.com/webslides/webslides">open source solution</a>, by <a href="https://twitter.com/webslides">@webslides</a>.</p>
+      </div>
+    </footer>  -->
+
+    <!-- Required -->
+    <script src="static/js/webslides.js"></script>
+    <script>
+      window.ws = new WebSlides();
+    </script>
+
+    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+    <script defer src="static/js/svg-icons.js"></script>
+
+  </body>
 </html>
