@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>SONAr: Desenvolvimento de uma Plataforma para Gerenciamento e Configuração de Redes Auto-Organizadas}{SONAr: Development of a Platform for the Management and Configuration of Self-Organized Networks</title>
+    <title>SONAr: Desenvolvimento de uma Plataforma para Gerenciamento e Configuração de Redes Auto-Organizadas</title>
     <meta name="description" content="">
 
     <!-- Google Fonts -->
@@ -15,6 +15,10 @@
 
     <!-- Optional - CSS SVG Icons (Font Awesome) -->
     <link rel="stylesheet" type='text/css' media='all' href="static/css/svg-icons.css">
+
+
+    <!-- Custom -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/custom.css">
   </head>
   <body>
     <main role="main">
@@ -24,6 +28,7 @@
           - Vertical sliding = <article id="webslides" class="vertical">
           - <div class="wrap"> = container 90% / <div class="wrap size-50"> = 45%;
         -->
+        <!--Título-->
         <section>
           <span class="background-right-bottom" style="background-image:url('images/background_with_qr.png')"></span>
           <div class="wrap aligncenter">
@@ -65,20 +70,150 @@
           </div>
           <!-- .end .wrap -->
         </section>
+
+        <!--Motivação-->
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap aligncenter">
+            <div>
+              <img id="wordcloud2" src="images/word-cloud-2.png" alt="Network Computers Word Cloud" class="clickable">
+              <br/><br/>
+              <span>Criado com <a href="https://monkeylearn.com/">MonkeyLearn</a> com base em <a href="https://ieeexplore.ieee.org/abstract/document/7169508/">(GUPTA; JHA, 2015)</a> e <a href="https://link.springer.com/article/10.1007/s10922-020-09517-0">(Clemm; A, 2020)</a></span>
+            </div>
+            <!-- .end -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h2><strong>Indicadores de Desempenho e Requisitos Comunicacionais</strong></h2>
+            <div class="grid">
+              <div class="column">
+                <table class="custom">
+                  <tbody>
+                    <tr>
+                      <th>Requisito</th><th>4G</th><th>5G</th><th>6G</th>
+                    </tr>
+                    <tr>
+                      <td>Taxa de Transmissão</td><td>1Gbps</td><td>10Gbps</td><td>1 Tbps</td>
+                    </tr>
+                    <tr>
+                      <td>Latência</td><td>35 - 52 ms</td><td> < 10ms </td><td> < 1 ms</td>
+                    </tr>
+                    <tr>
+                      <td>Suporte a Mobilidade</td><td>120 - 350 Km/h</td><td> 500 Km/h </td><td> 1000 Km/h</td>
+                    </tr>
+                    <tr>
+                      <td>Densidade de nós</td><td>100000 / km²</td><td>1000000 / km²</td><td>10000000 / km²</td>
+                    </tr>
+                    <tr>
+                      <td>Economia de Energia</td><td>1</td><td>10x</td><td>1000x</td>
+                    </tr>
+                    <tr>
+                      <td>Eficiência Espectral</td><td>1,46 bps / Hz</td><td>30 bps / Hz</td><td>100 bps / Hz</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <span>Baseado em <a href="https://arxiv.org/abs/2004.14247">(RAJATHEVA et al, 2020)</a></span>
+              </div>
+              <div class="column">
+                <table class="custom">
+                  <tbody>
+                    <tr>
+                      <th>Requisito</th><th>Aplicações/Especificações</th>
+                    </tr>
+                    <tr>
+                      <td>Latência</td><td>Auditiva: < 100 ms, Visual: < 10 ms e Tátil: < 1 ms</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>Taxa de Transmissão</td><td>Imersão total AR/VR: ~ 5.2Gbps</td>
+                    </tr>
+
+                    <tr>
+                      <td>Resiliência</td><td>até 99.999%</td>
+                    </tr>
+
+                    <tr>
+                      <td>Requisitos Qualitativos</td><td>mobilidade, <i>multicast</i>, segurança, plasticidade...</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <span>Baseado em <a href="http://ieeexplore.ieee.org/document/7403840/">(SIMSEK et al, 2016)</a></span>
+                <br/>
+                <table class="custom">
+                  <tbody>
+                    <tr>
+                      <th>Desafios/Requisito dos Operadores</th>
+                    </tr>
+                    <tr>
+                      <td>Garantia de SLA's</td>
+                    </tr>
+                    <tr>
+                      <td>Crescimento da infraestrutura</td>
+                    </tr>
+                    <tr>
+                      <td>Proteção contra ameaças de segurança</td>
+                    </tr>
+                    <tr>
+                      <td>Otimização de Recursos</td>
+                    </tr>
+                    <tr>
+                      <td>Requisitos de redes móveis e aplicações</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <span>Baseado em <a href="https://ieeexplore.ieee.org/document/8361844/">(ZAIDI et al, 2018)</a></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+         <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="">
+            <div class="grid">
+              <div class="column">
+                <h2><strong>Gerenciamento de Rede</strong></h2>
+                <div class="bg-white shadow">
+                  <ul class="flexblock">
+                    <li>
+                      <span>Segundo Clemm no livro <a href="https://pws.yazd.ac.ir/matinkhah/NM/pdf/ch0.pdf"><i>Network Management Fundamentals</i></a>:</span>
+                      <br/>
+                      <blockquote><i>"Gerenciamento de Rede é o conjunto de técnicas, ferramentas e procedimentos utilizados nas atividades de operação, administração, manutenção e aprovisionamento de sistemas conectados em rede."</i></blockquote>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="column">
+                <h2><strong>Computação Autônoma</strong></h2>
+                <div class="bg-white shadow">
+                  <ul class="flexblock">
+                    <li>
+                      <span>O artigo da IBM <a href="https://ieeexplore.ieee.org/abstract/document/5386835/"><i>The dawning of the autonomic computing era</i></a> define:</span>
+                      <br/>
+                      <blockquote><i>"A computação autônoma suporta a criação de sistemas auto-gerenciados com maior resiliência e menor complexidade com base em quatro fundamentos (também conhecidos como propriedades self-*): auto-configuração, auto-cura, auto-proteção e auto-otimização."</i></blockquote>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- .end .bg-white shadow -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <!--Tema-->
         <section>
           <!--.wrap = container (width: 90%) -->
           <div class="wrap size-50 aligncenter">
-            <h2><strong>Why WebSlides?</strong></h2>
-            <p class="text-intro"><a href="demos/why-webslides.html" title="Why WebSlides?">Presentations</a>, <a href="demos/landings.html" title="Landings">landings</a>, <a href="demos/portfolios.html" title="Portfolios">portfolios</a>, and <a href="demos/longforms.html" title="Longforms">longforms</a>.</p>
+            <h2><strong>Tema da Pesquisa</strong></h2>
             <div class="bg-white shadow">
-              <ul class="flexblock reasons">
+              <ul class="flexblock">
                 <li>
-                  <h2>An opportunity to engage.</h2>
-                  <p>WebSlides is about good karma. This is about telling the story, and sharing it in a beautiful way. HTML and CSS as narrative elements.</p>
-                </li>
-                <li>
-                  <h2>Work better, faster.</h2>
-                  <p>Designers, marketers, and journalists can now focus on the content. Simply <a href="demos/index.html" title="WebSlides Demos">choose a demo</a> and customize it in minutes.</p>
+                  <p class="text-intro">Auto-Gerenciamento de Rede com foco na automação das operações de configuração.</p>
                 </li>
               </ul>
             </div>
@@ -88,232 +223,729 @@
         </section>
         <section>
           <!--.wrap = container (width: 90%) -->
-          <div class="wrap">
-            <div class="grid vertical-align">
-              <div class="column">
-                <h3><strong>WebSlides is really easy</strong></h3>
-                <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
-                <p>Code is clean and scalable. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Making an HTML presentation has never been so fast</strong>.</p>
-              </div>
-              <!-- .end .column -->
-              <div class="column">
-                <pre>&lt;article id="webslides"&gt;
-  <span class="code-comment">&lt;!-- Slide 1 --&gt;</span>
-  &lt;section&gt;
-    &lt;h1&gt;Design for trust&lt;/h1&gt;
-  &lt;/section&gt;
-  <span class="code-comment">&lt;!-- Slide 2 --&gt;</span>
-  &lt;section class="bg-primary"&gt;
-    &lt;div class="wrap"&gt;
-      &lt;h2&gt;.wrap = container (width: 90%)&lt;/h2&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-&lt;/article&gt;
-</pre>
-              </div>
-              <!-- .end .column -->
+          <div class="wrap size-50 aligncenter">
+            <h2><strong>Problemas de Pesquisa</strong></h2>
+            <div class="bg-white shadow">
+              <ul class="flexblock reasons">
+                <li>
+                  <p>Como automatizar a inicialização da infraestrutura de rede e dos componentes de controle e gerenciamento?.</p>
+                </li>
+                <li>
+                  <p>Como permitir o acoplamento e desacoplamento automático de dispositivos na infraestrutura de rede de maneira segura?.</p>
+                </li>
+                <li>
+                  <p>Como traduzir os requisitos de aplicações e corporações de forma ágil e flexível em instruções de configuração da infraestrutura de rede?.</p>
+                </li>
+              </ul>
             </div>
-            <!-- .end .grid -->
+            <!-- .end .bg-white shadow -->
           </div>
           <!-- .end .wrap -->
         </section>
         <section>
-          <div class="wrap">
-            <h2>Features</h2>
-            <ul class="flexblock features">
-              <li>
-                <div>
-                  <h2>
-                    <span>&rarr;</span>
-                    Simple Navigation
-                  </h2>
-                  with arrow keys, presenter...
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <svg class="fa-link">
-                      <use xlink:href="#fa-link"></use>
-                    </svg>
-                    Permalinks
-                  </h2>
-                  Go to a specific slide.
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <svg class="fa-clock-o">
-                      <use xlink:href="#fa-clock-o"></use>
-                    </svg>
-                    Slide Counter
-                  </h2>
-                  Current/Total number.
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <span>40<sup>+</sup></span>
-                    Beautiful Components
-                  </h2>
-                  Covers, cards, quotes...
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <svg class="fa-text-height">
-                      <use xlink:href="#fa-text-height"></use>
-                    </svg>
-                    Vertical Rhythm
-                  </h2>
-                  Use multiples of 8.
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <span>500<sup>+</sup></span>
-                    SVG Icons
-                  </h2>
-                  Font Awesome Kit.
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section>
-          <div class="wrap">
-            <h2><strong>WebSlides Demos</strong></h2>
-            <p>Contribute on <a href="https://github.com/webslides/webslides" title="Contribute on Github">Github</a>. <span class="alignright"><a href="demos/index.html" title="WebSlides Demos">View all &rsaquo;</a></span></p>
-            <ul class="flexblock gallery">
-              <li>
-                <a href="demos/why-webslides.html" title="Why WebSlides?">
-                  <figure>
-                    <img alt="Thumbnail Why WebSlides?" src="https://webslides.tv/static/images/demos-why.png">
-                    <figcaption>
-                      <h2>Why WebSlides?</h2>
-                    </figcaption>
-                  </figure>
-                </a>
-              </li>
-              <li>
-                <a href="demos/landings.html" title="Landings">
-                  <figure>
-                    <img alt="Thumbnail Landings" src="https://webslides.tv/static/images/demos-landings.png">
-                    <figcaption>
-                      <h2>Landings</h2>
-                    </figcaption>
-                  </figure>
-                </a>
-              </li>
-              <li>
-                <a href="demos/portfolios.html" title="Portfolios">
-                  <figure>
-                    <img alt="Thumbnail Portfolios" src="https://webslides.tv/static/images/demos-portfolios.png">
-                    <figcaption>
-                      <h2>Portfolios</h2>
-                    </figcaption>
-                  </figure>
-                </a>
-              </li>
-              <li>
-                <a href="demos/keynote.html" title="Apple Keynote">
-                  <figure>
-                    <img alt="Thumbnail Apple Keynote" src="https://webslides.tv/static/images/demos-apple.png">
-                    <figcaption>
-                      <h2>Apple Keynote</h2>
-                    </figcaption>
-                  </figure>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <div class="wrap">
-            <div class="grid vertical-align">
-              <div class="column">
-                <h4>
-                  <svg class="fa-life-ring">
-                    <use xlink:href="#fa-life-ring"></use>
-                  </svg>
-                  <strong>Guides</strong>
-                </h4>
-                <p>If you need help, here's just three tutorials. Just a basic knowledge of HTML is required:</p>
-                <ul class="description">
-                  <li><a href="demos/components.html" title="WebSlides Components">WebSlides Components</a>.</li>
-                  <li><a href="demos/classes.html" title="WebSlides Classes">WebSlides Classes</a>.</li>
-                  <li><a href="demos/media.html" title="WebSlides Media">WebSlides Media: images, videos...</a></li>
-                </ul>
-              </div>
-              <div class="column">
-                <figure><img class="aligncenter" src="static/images/setup.png" alt="WebSlides Files"></figure>
-              </div>
-              <div class="column">
-                <h4>
-                  <svg class="fa-cubes">
-                    <use xlink:href="#fa-cubes"></use>
-                  </svg>
-                  <strong>Built to expand</strong>
-                </h4>
-                <p>The best way to <strong>inspire with your content</strong> is to connect on a personal level:</p>
-                <ul class="description">
-                  <li>Background images: <a href="http://unsplash.com">Unsplash</a>.</li>
-                  <li>CSS animations: <a href="https://daneden.github.io/animate.css/">Animate.css</a>.</li>
-                  <li>Longforms: <a href="http://michalsnik.github.io/aos/"> Animate on scroll</a>.</li>
-                </ul>
-              </div>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-50 aligncenter">
+            <h2><strong>Hipótese da Pesquisa</strong></h2>
+            <div class="bg-white shadow">
+              <ul class="flexblock">
+                <li>
+                  <blockquote><i>"É possível melhorar a velocidade e flexibilidade da rede através da automação da configuração dos elementos de infraestrutura."</i></blockquote>
+                </li>
+              </ul>
             </div>
-            <!--end .grid -->
-          </div>
-        </section>
-        <section class="aligncenter">
-          <!-- .wrap = container (width: 90%) -->
-          <div class="wrap">
-            <h2><strong>Ready to Start?</strong> </h2>
-            <p class="text-intro">Create your own presentation instantly. <br>120+ premium slides ready to use.</p>
-            <p>
-              <a href="https://webslides.tv/webslides-latest.zip" class="button" title="Download WebSlides">
-                <svg class="fa-cloud-download">
-                  <use xlink:href="#fa-cloud-download"></use>
-                </svg>
-                Free Download
-              </a>
-              <span class="try">
-                <a href="https://www.paypal.me/jlantunez/8" title="Thanks :)">
-                  <svg class="fa-paypal">
-                    <use xlink:href="#fa-paypal"></use>
-                  </svg>
-                  Pay what you want.
-                </a>
-              </span>
-            </p>
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section class="slide-bottom">
-          <div class="wrap">
-            <div class="content-right text-serif">
-              <h2>
-                <strong>Thanks.</strong>
-                <a target="_blank" title="Share on Twitter" href="https://twitter.com/intent/tweet?text=Finally,%20everything%20you%20need%20to%20make%20HTML%20presentations%20in%20a%20fast/beautiful%20way.%20@WebSlides%20=%20Good%20karma%20&mdash;%20https://webslides.tv">
-                  <svg class="fa-twitter">
-                    <use xlink:href="#fa-twitter"></use>
-                  </svg>
-                </a>
-              </h2>
-              <p>People share content that makes them feel inspired. WebSlides is a very effective way to engage young audiences, customers, and teams.</p> 
-              <p>Best,<br> <a href="https://twitter.com/jlantunez">@jlantunez</a>, <a href="https://twitter.com/belelros">@belelros</a>, and <a href="https://twitter.com/luissacristan">@luissacristan</a>.</p>
-            </div>
-            <!-- .end .content-right -->
+            <!-- .end .bg-white shadow -->
           </div>
           <!-- .end .wrap -->
         </section>
 
+
+        <!--Abordagem-->
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-40 aligncenter">
+            <h2><strong>Abordagem da Pesquisa</strong></h2>
+            <p class="text-intro"><a href="https://www.tandfonline.com/doi/abs/10.2753/MIS0742-1222240302"><i>Design Science Research Methodology</i></a> + <a href="https://www.sciencedirect.com/science/article/pii/0167923694000436"><i>Conceptual Modeling</i></a></p>
+            <div class="bg-white shadow">
+              <img id="dsrm" class="clickable" src="images/dsrm-closed.png" alt="DSRM">
+            </div>
+            <!-- .end .bg-white shadow -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+
+        <!--Abordagem-->
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap aligncenter">
+            <h2><strong>Trabalhos Correlatos</strong></h2>
+            <div class="carousel-container">
+              <div class="carousel fade">
+                <p class="title-correlated-works">Auto-Gerenciamento</p>
+                <table class="custom">
+                  <tbody>
+                    <tr>
+                      <th>Proposta</th><th>Ano</th><th>Tipo de Rede</th><th>Tipo de Solução</th><th>Tecnologias</th><th>Características</th>
+                    </tr>
+                    <tr>
+                      <td>ANM <br/><a href="https://ieeexplore.ieee.org/abstract/document/7047267/">(Tsagkaris et al.,2015)</a> </td>
+                      <td> 2015 </td>
+                      <td> Telecom </td>
+                      <td> Conceitual </td>
+                      <td> SDN; ACL; SOM; CRS  </td>
+                      <td> gerenciamento de rede autônomo; loop de controle (abordagem ativa); proposta não implementada e nem experimentada</td>
+                    </tr> 
+                        
+                    <tr>
+                      <td>SELFNET <br/><a href="https://journals.sagepub.com/doi/abs/10.1155/2016/2897479">(NEVES et al., 2016)</a> </td>
+                      <td> 2018 </td>
+                      <td> Telecom </td>
+                      <td> Framework </td>
+                      <td> SDN; NFV; AI; Cloud Computing  </td>
+                      <td> gerenciamento de rede autônomo; sensores e atuadores nos planos de controle e dados; foco no CORE 5G; resultados preliminares com testes unitários</td>
+                    </tr>
+                        
+                    <tr>
+                      <td>SUPERFLUIDITY <br/><a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/ett.3082">(BIANCHI et al., 2016)</a> </td>
+                      <td> 2018 </td>
+                      <td> Telecom </td>
+                      <td> Framework </td>
+                      <td> NFV; SDN; MEC; CRAN </td>
+                      <td> aprovisionamento de serviços on-the-fly; funções de rede virtualizadas em blocos reutilizáveis; inclui resultados preliminares</td>
+                    </tr>
+                        
+                    <tr>
+                      <td>COGNET <br/><a href="https://ieeexplore.ieee.org/abstract/document/7561056/">(XU et al., 2016)</a> </td>
+                      <td> 2016 </td>
+                      <td> Telecom </td>
+                      <td> Arquitetura </td>
+                      <td> NFV; BigData; ML </td>
+                      <td> rede com capacidades cognitivas; ``extensão'' da arquitetura NFV; proposta não implementada e nem experimentada</td>
+                    </tr> 
+                        
+                    <tr>
+                      <td><a href="https://ieeexplore.ieee.org/abstract/document/8328672/">Abdallah et al. (2018)</a> </td>
+                      <td> 2018 </td>
+                      <td> SDN </td>
+                      <td> Arquitetura </td>
+                      <td> SDN, FCAPS, OF-CONFIG </td>
+                      <td> gerenciamento de redes SDN; aplicações FCAPS; gerenciador na NBI do controlador; testes preliminares de desempenho</td>
+                    </tr> 
+                        
+                    <tr>
+                      <td>ArchSDN <br/><a href="https://link.springer.com/article/10.1007/s42452-020-03316-7">(FERREIRA et al., 2020)</a> </td>
+                      <td> 2020 </td>
+                      <td> SDN </td>
+                      <td> Arquitetura </td>
+                      <td> SDN, SARSA, MPLS </td>
+                      <td> gerenciamento híbrido do plano de controle SDN; divisão da infraestrutura em setores; cálculo de rotas com SARSA; teste de viabilidade e resultados básicos</td>
+                    </tr>
+                        
+                    <tr>
+                      <td>SONAr <br/>(este trabalho) </td>
+                      <td> 2021 </td>
+                      <td> Compu-tadores </td>
+                      <td> Arquitetura </td>
+                      <td> AC; DDBMS; EDA; ML; SDN; NFV; </td>
+                      <td> gerenciamento de rede autônomo; entidades self-*; fluxo de coleta, análise, tomada de decisão, intervenção e validação</td>
+                    </tr> 
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="carousel fade">
+                <p class="title-correlated-works">Auto-Configuração</p>
+                <table class="custom">
+                  <tbody>
+                    <tr>
+                      <th>Proposta</th><th>Ano</th><th>Tipo de Rede</th><th>Tipo de Solução</th><th>Tecnologias</th><th>Características</th>
+                    </tr>
+                    <tr>
+                      <td><a href="https://ieeexplore.ieee.org/abstract/document/6528283/">Sharma et al. (2013)</a></td>
+                      <td> 2013 </td>
+                      <td> SDN </td>
+                      <td> Método </td>
+                      <td> SDN; OpenFlow; DHCP; LLDP </td>
+                      <td> configuração automática de switches OpenFlow; DHCP Server modificado; controle in-band; testes simulados</td>
+                    </tr> 
+
+                    <tr>
+                      <td>InitSDN <br/><a href="https://ieeexplore.ieee.org/abstract/document/7116132/">(Patil et al. 2015)</a> </td>
+                      <td> 2015 </td>
+                      <td> SDN </td>
+                      <td> Conceitual </td>
+                      <td> SDN; OpenFlow  </td>
+                      <td> inicialização do plano de controle; controle in-band; particionamento e sincronização de informações; não inclui experimentos e resultados</td>
+                    </tr> 
+                        
+                    <tr>
+                      <td><a href="https://dl.acm.org/doi/abs/10.1145/2837030.2837037">Katiyar et al. (2015)</a> </td>
+                      <td> 2015 </td>
+                      <td> SDN </td>
+                      <td> Método </td>
+                      <td> SDN; OpenFlow; DHCP; LLDP </td>
+                      <td> auto-configuração de switches em redes híbridas; DHCP Server modificado; controle in-band; não inclui resultados</td>
+                    </tr> 
+                        
+                    <tr>
+                      <td>LearnQoS <br/><a href="https://ieeexplore.ieee.org/abstract/document/8436781/">(AL-JAWAD et al., 2018)</a> </td>
+                      <td> 2018 </td>
+                      <td> SDN </td>
+                      <td> Framework </td>
+                      <td> PBNM; SDN; Redes Neurais;  </td>
+                      <td> gerenciamento autônomo de serviços e QoS; componentes na camada de aplicação; redes neurais para a análise do QoS; resultados comparando transmissão de vídeo com e sem QoS</td>
+                    </tr> 
+                        
+                    <tr>
+                      <td>SmartSON <br/><a href="https://arxiv.org/abs/2008.11803">(YOUSAFZAI; HONG, 2020)</a> </td>
+                      <td> 2020 </td>
+                      <td> Telecom </td>
+                      <td> Framework </td>
+                      <td> NFV; block-chain; SON;  </td>
+                      <td> auto-configuração de serviços; abordagem baseada em block-chain; estratégia Pub/Sub; requer uma rede em estado operacional; experimentos com negociação simuladas</td>
+                    </tr>
+                        
+                    <tr>
+                      <td>SeCoMP<br/>(este trabalho) </td>
+                      <td> 2021 </td>
+                      <td> Compu-tadores </td>
+                      <td> Plataforma </td>
+                      <td> AC; DDBMS; EDA; ML; SDN; NFV; microsserviços; contêineres </td>
+                      <td> automação de operações de auto-configuração; entidades self-*; microsserviços como contêineres; serviços baseados em intenções; resultados com análise de tempo</td>
+                    </tr> 
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+            <br/>
+            <div class="carousel-dot-panel">
+              <span class="dot" onclick="currentItemCarousel(1)"></span> 
+              <span class="dot" onclick="currentItemCarousel(2)"></span> 
+            </div>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-30 aligncenter">
+            <h2><strong>Self-Organizing Network Model (SONeM)</strong></h2>
+            <div class="carousel-container">
+              <div class="carousel fade">
+                <img src="images/sonem-1.png">
+              </div>
+
+              <div class="carousel fade">
+                <img src="images/sonem-2.png">
+              </div>
+
+              <div class="carousel fade">
+                <img src="images/sonem-3.png">
+              </div>
+
+              <div class="carousel fade">
+                <img src="images/sonem-4.png">
+              </div>
+
+              <div class="carousel fade">
+                <img class="rotate" src="images/sonem-5.png">
+              </div>
+            </div>
+            <br>
+
+            <div class="carousel-dot-panel">
+              <span class="dot" onclick="currentItemCarousel(1)"></span> 
+              <span class="dot" onclick="currentItemCarousel(2)"></span> 
+              <span class="dot" onclick="currentItemCarousel(3)"></span> 
+              <span class="dot" onclick="currentItemCarousel(4)"></span> 
+              <span class="dot" onclick="currentItemCarousel(5)"></span> 
+            </div>
+
+            <!-- .end .bg-white shadow -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+
+
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-90 aligncenter">
+            <h2><strong>Intent-Based Service Model (IBSM)</strong></h2>  
+            <div class="grid">
+              <div class="column">
+                <ul class="flexblock">
+                  <li>
+                    <div class="bg-white shadow">
+                      <h2><strong>Intent-Based Service Representation Model (IBSRM)</strong></h2>
+                      <img id="ibsrm" class="clickable" src="images/ibsrm-2.png" alt="IBSRM" style="max-height:46rem"/>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="bg-white shadow">
+                      <h2><strong>Intent-Based Service Provisioning Model (IBSPM)</strong></h2>
+                      <img id="ibspm" class="clickable" src="images/ibspm-2.png" alt="IBSPM" style="max-height:46rem">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            <!-- .end .bg-white shadow -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap aligncenter">
+            <h2><strong>Self-Organizing Network Architecture (SONAr)</strong></h2>
+            <div class="carousel-container">
+              <div class="carousel fade">
+                <img src="images/sonar-1.png">
+              </div>
+
+              <div class="carousel fade">
+                <img src="images/sonar-2.png">
+              </div>
+
+              <div class="carousel fade">
+                <img src="images/sonar-3.png">
+              </div>
+
+              <div class="carousel fade">
+                <img src="images/sonar-4.png">
+              </div>
+
+              <div class="carousel fade">
+                <img src="images/sonar-5.png">
+              </div>
+              <div class="carousel fade">
+                <img src="images/sonar-6.png">
+              </div>
+              <div class="carousel fade">
+                <img src="images/sonar-7.png">
+              </div>
+            </div>
+            <br>
+
+            <div class="carousel-dot-panel">
+              <span class="dot" onclick="currentItemCarousel(1)"></span> 
+              <span class="dot" onclick="currentItemCarousel(2)"></span> 
+              <span class="dot" onclick="currentItemCarousel(3)"></span> 
+              <span class="dot" onclick="currentItemCarousel(4)"></span> 
+              <span class="dot" onclick="currentItemCarousel(5)"></span> 
+              <span class="dot" onclick="currentItemCarousel(6)"></span> 
+              <span class="dot" onclick="currentItemCarousel(7)"></span> 
+            </div>
+
+            <!-- .end .bg-white shadow -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+
+
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap aligncenter">
+            <h2><strong>Estudo de Caso: Auto-Configuração através da SONAr</strong></h2>
+            <div class="wrap carousel-container">
+              <div class="carousel fade">
+                <img src="images/bpmn-boot.png">
+              </div>
+
+              <div class="carousel fade">
+                <img src="images/bpmn-pnp.png">
+              </div>
+
+              <div class="carousel fade">
+                <img src="images/bpmn-serv.png">
+              </div>
+            <br>
+          </div>
+
+          <div class="carousel-dot-panel">
+            <span class="dot" onclick="currentItemCarousel(1)"></span> 
+            <span class="dot" onclick="currentItemCarousel(2)"></span> 
+            <span class="dot" onclick="currentItemCarousel(3)"></span> 
+          </div>
+
+
+            <!-- .end .bg-white shadow -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-70 aligncenter">
+            <h2><strong>SONAr-Framework</strong></h2>  
+            <div class="grid">
+              <div class="column">
+                <ul class="flexblock">
+                  <li>
+                    <div class="bg-white shadow">
+                      <img class="clickable" src="images/framework-overview.png"/>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="bg-white shadow">
+                      <img class="clickable" src="images/framework-example.png" >
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            <!-- .end .bg-white shadow -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-50 aligncenter">
+            <h2><strong>Self-Configuration and Management Platform (SeCoMP)</strong></h2>  
+            <div class="bg-white shadow">
+              <img src="images/secomp.png" alt="SeCoMP">
+            </div>
+            <!-- .end .bg-white shadow -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-80 aligncenter">
+            <h2><strong>Experimentos</strong></h2> 
+
+            <div class="wrap carousel-container">
+              <div class="carousel fade">
+                <div class="grid">
+                  <div class="column">
+                    <ul class="flexblock">
+                      <li>
+                        <div class="bg-white shadow">
+                          <img src="images/experiment.png">
+                        </div>
+                      </li>
+                      <li>
+                        <div class="bg-white shadow">
+                          <img src="images/topology.png">
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel fade">
+                <div class="grid">
+                  <div class="column">
+                    <ul class="flexblock">
+                      <li>
+                        <div class="bg-white shadow">
+                          <h2 class="experiment-title">1. Inicialização de uma Rede SDN/OpenFlow</h2>
+                          <ul>
+                            <li><b>1. Odem Prefixa</b></li>
+                            <li><b>2. Odem Posfixa</b></li>
+                            <li><b>3. Odem Posfixa + CPI</b></li>
+                          </ul>
+                          <br/>
+                          <b>Resultado Esperado</b>
+                          <ul>
+                            <li>1. um ou mais controladores com suporte ao protocolo OpenFlow tenham sido aprovisionados;</li>
+                            <li>2. todos os dispositivos de comutação tenham sido configurados e estejam conectados a pelo menos um controlador;</li>
+                            <li>3. os fluxos de controle e de gerenciamento tenham sido devidamente calculados e configurados (de maneira ótima e livres de loops ou black-holes);</li>
+                            <li>4. e, que a comunicação entre os hosts adjacentes à topologia seja possível através da malha de rede (de acordo com os serviços aprovisionados).</li>
+                          </ul>
+                          <br/>
+                          <b>Passo-a-passo</b>
+                          <ul>
+                            <li>1. iniciar todos os recursos endereçáveis (servidores, hosts e dispositivos de comutação);</li>
+                            <li>2. e, executar o procedimento de inicialização caso ele não tenha sido executado automaticamente ao iniciar o servidor (de acordo com a configuração).</li>
+                          </ul>
+                        </div>
+                      </li>
+                      
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel fade">
+                <div class="grid">
+                  <div class="column">
+                    <ul class="flexblock">
+                      <li>
+                        <div class="bg-white shadow">
+                          <h2 class="experiment-title">2. Plug-and-Play de switches OpenFlow</h2>
+                          <ul>
+                            <li><b>1. Sem CPI</b></li>
+                            <li><b>2. Com CPI</b></li>
+                            <li><b>3. Com CPI + descoberta atrasada</b></li>
+                          </ul>
+                          <br/>
+                          <b>Resultado Esperado</b>
+                          <ul>
+                            <li>1. o novo dispositivo tenha sido configurado e esteja conectado a um controlador;</li>
+                            <li>2. e, que os fluxos de controle/gerenciamento tenham sido reconfigurados para evitar loops e garantir a conectividade.</li>
+                          </ul>
+                          <br/>
+                          <b>Passo-a-passo</b>
+                          <ul>
+                            <li>1. iniciar a rede através dos procedimentos definidos no experimento anterior;</li>
+                            <li>2. implantar/aprovisionar um novo dispositivo; e,</li>
+                            <li>3. conectar o dispositivo à topologia e iniciá-lo.</li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel fade">
+                <div class="grid">
+                  <div class="column">
+                    <ul class="flexblock">
+                      <li>
+                        <div class="bg-white shadow">
+                          <h2 class="experiment-title">3. Aprovisionamento de Serviço de VoIP</h2>
+                          <ul>
+                            <li><b>1. Sem QoS configurado pela SeCoMP</b></li>
+                            <li><b>2. Com o QoS automaticamente configurado pela SeCoMP</b></li>
+                          </ul>
+                          <br/>
+                          <b>Resultado Esperado</b>
+                          <ul>
+                            <li>1. espera-se que a comunicação VoIP seja priorizada de maneira à garantir pelo menos 64kbps durante toda a comunicação.</li>
+                          </ul>
+                          <br/>
+                          <b>Passo-a-passo</b>
+                          <ul>
+                            <li>1. criar topologia e iniciar rede; (Obs. no teste sem SeCoMP a TCoE e a SCE não devem ser iniciados e os fluxos precisam ser criados diretamente nos switches)</li>
+                            <li>2. criar quatro hosts com o iperf3 ligá-los à topologia;</li>
+                            <li>3. executar o iperf3 por 50 segundos como receptor no host3 e como emissor de tráfego VoIP (RTP/UDP porta 16384 e ToS 0xC0) no host1 com taxa de 64Kbps; e,</li>
+                            <li>4. simultâneamente ao passo 2 aguardar 20 segundos e executar o iperf3 por 30 segundos como receptor no host4 e como emissor de tráfego Torrent (TCP porta 6881) no host2 com taxa de 1Gbps.</li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            <br>
+          </div>
+
+          <div class="carousel-dot-panel">
+            <span class="dot" onclick="currentItemCarousel(1)"></span> 
+            <span class="dot" onclick="currentItemCarousel(2)"></span> 
+            <span class="dot" onclick="currentItemCarousel(3)"></span> 
+            <span class="dot" onclick="currentItemCarousel(4)"></span> 
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-80 aligncenter">
+            <h2><strong>Resultados</strong></h2> 
+
+            <div class="wrap carousel-container">
+              <div class="carousel fade">
+                <div class="bg-white shadow">
+                  <h2 class="experiment-title">1. Inicialização de uma Rede SDN/OpenFlow</h2>
+                  <img src="images/result-1.png" class="image-result">
+                </div>
+              </div>
+
+              <div class="carousel fade">
+                <div class="bg-white shadow">
+                  <h2 class="experiment-title">2. Plug-and-Play de switches OpenFlow</h2>
+                  <img src="images/result-2.png" class="image-result">
+                </div>
+              </div>
+
+              <div class="carousel fade">
+                <div class="bg-white shadow">
+                  <h2 class="experiment-title">3. Aprovisionamento de Serviço de VoIP</h2>
+                  <img src="images/result-3.png" class="image-result">
+                </div>
+              </div>
+          </div>
+
+          <br/>
+          
+
+          <div class="carousel-dot-panel">
+            <span class="dot" onclick="currentItemCarousel(1)"></span> 
+            <span class="dot" onclick="currentItemCarousel(2)"></span> 
+            <span class="dot" onclick="currentItemCarousel(3)"></span> 
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-80 aligncenter">
+            <h2><strong>Conclusão</strong></h2>
+            <div class="grid">
+              <div class="column">
+                <div class="bg-white shadow">
+                  <h2>Problemas</h2>
+                  <ul class="flexblock specs">
+                    <li>
+                      <p  class="text-intro">Como automatizar a inicialização da infraestrutura de rede e dos componentes de controle e gerenciamento?.</p>
+                    </li>
+                    <li>
+                      <p  class="text-intro">Como permitir o acoplamento e desacoplamento automático de dispositivos na infraestrutura de rede de maneira segura?.</p>
+                    </li>
+                    <li>
+                      <p  class="text-intro">Como traduzir os requisitos de aplicações e corporações de forma ágil e flexível em instruções de configuração da infraestrutura de rede?.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="column">
+                <div class="bg-white shadow">
+                  <h2>Hipótese</h2>
+                  <ul class="flexblock">
+                    <li>
+                      <blockquote  class="text-intro"><i>"É possível melhorar a velocidade e flexibilidade da rede através da automação da configuração dos elementos de infraestrutura."</i></blockquote>
+                    </li>
+                  </ul>
+                </div>
+                <br/>
+                <div class="bg-white shadow">
+                  <h2>Tema da Pesquisa</h2>
+                  <ul class="flexblock">
+                    <li>
+                      <p class="text-intro">Auto-Gerenciamento de Rede com foco na automação das operações de configuração.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-40 aligncenter">
+            <h2><strong>Contribuíções / Artefatos</strong></h2>  
+            <div class="bg-white shadow">
+              <img class="clickable" src="images/artefatos.png" >
+            </div>
+            <!-- .end .bg-white shadow -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-70 aligncenter">
+            <h2><strong>Publicações / Submissões</strong></h2>
+            <div class="carousel-container">
+              <div class="carousel fade">
+                <div class="bg-white shadow">
+                  <h2>Principal</h2>
+                  <ul class="flexblock reasons">
+                    <li>
+                      <p  class="text-intro"><i>Bootstrapping and Plug-and-Play Operations on Software Defined Networks: A Case Study on Self-Configuration Using the SONAr Architecture</i> – publicado no <b>CLOSER 2020</b>; e,</p>
+                    </li>
+                    <li>
+                      <p  class="text-intro"><i>Automating Configuration Operations on SDN Networks through the SONAr Management Platform</i> – submetido ao <b>TNSM 2021</b>.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="carousel fade">
+                <div class="bg-white shadow">
+                  <h2>Coautoria</h2>
+                  <ul class="flexblock reasons">
+                    <li>
+                      <p  class="text-intro"><i>A Self-healing Platform for the Control and Management Planes Communication in Softwarized and Virtualized Networks</i> – publicado no <b>CLOSER 2020</b>;</p>
+                    </li>
+                    <li>
+                      <p  class="text-intro"><i>Self-healing in the Scope of Software-basedComputer and Mobile Networks</i> – publicado no <b>CCIS 2021</b>;</p>
+                    </li>
+                    <li>
+                      <p  class="text-intro"><i>Network Self-configuration for Edge Elements using Self-Organizing Networks Architecture (SONAr)</i> – publicado no <b>CLOSER 2021</b>; e,</p>
+                    </li>
+                    <li>
+                      <p  class="text-intro"><i>Management Slices: Enabling Self-management for SDN and NFV Communication Layers</i> – submetido ao <b>COMMAG 2021</b>.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <br>
+
+            <div class="carousel-dot-panel">
+              <span class="dot" onclick="currentItemCarousel(1)"></span> 
+              <span class="dot" onclick="currentItemCarousel(2)"></span> 
+            </div>
+
+            <!-- .end .bg-white shadow -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-100 aligncenter">
+          <h2><strong>Perspectivas Futuras</strong></h2>
+          
+          <div class="bg-white shadow">
+            <h2>Principal</h2>
+            <ul class="flexblock activity">
+              <li>
+                <p>Extensão da solução de automação de operações de configuração implementada pela SeCoMP para novos tipos de redes com diferentes tecnologias (e.g. rede metro-ethernet e 5G);</p>
+              </li>
+              <li>
+                <p>Implementação de novas operações de gerenciamento no SONAr-Framework, não apenas voltadas ao aspecto de configuração, mas também de cura, proteção e otimização;</p>
+              </li>
+              <li>
+                <p>Aplicação da SeCoMP em redes reais (e.g. rede doméstica e rede de um ISP), e testes comparativos com cenários práticos;</p>
+              </li>
+              <li>
+                <p>Criação de uma test-bed com a SeCoMP integrada à outras soluções baseadas no SONAr-Framework compartilhada entre os desenvolvedores do MEHAR;</p>
+              </li>
+              <li>
+                <p>Implementação das SLEs com técnicas de Inteligência Artificial, e das CoEs não contempladas neste trabalho no SONAr-Framework;</p>
+              </li>
+              <li>
+                <p>Amadurecimento e refinamento da SONAr através da proposição e eliminação de entidades; melhoria da documentação; e, aplicação em mais estudos de caso; e,</p>
+              </li>
+              <li>
+                <p>Refinamento do IBSM e da IBSO através da revisão do levantamento de requisitos comunicacionais e aprimoramento da especificação de serviço baseado em intenção.</p>
+              </li>
+            </ul>
+          </div>
+
+            <!-- .end .bg-white shadow -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="aligncenter bg-black">
+          <span class="background" style="background-image:url('images/obrigado.jpeg')"></span>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1>Obrigado</h1>
+            <br/>
+            <hr/>
+            <br/>
+            <p class="text-intro">Maurício Amaral Gonçalves</p>
+            <p class="text-intro">mauricioamaralg@ufu.br</p>
+          </div>
+          <!-- .end .wrap -->
+        </section>
       </article>
       <!-- end article -->
     </main>
@@ -335,6 +967,116 @@
 
     <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
     <script defer src="static/js/svg-icons.js"></script>
+
+    <script src="static/js/jquery-3.6.0.min.js"></script>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $('#wordcloud2').click(function(){
+        var image = $(this);
+        if(image.attr('src') == 'images/word-cloud-2-off.png')
+          image.attr('src', 'images/word-cloud-2.png');
+        else
+          image.attr('src', 'images/word-cloud-2-off.png');
+        image.fadeIn('fast');
+      });
+
+      $('#dsrm').click(function(){
+        var image = $(this);
+        if(image.attr('src') == 'images/dsrm-closed.png')
+          image.attr('src', 'images/dsrm-opened.png');
+        else
+          image.attr('src', 'images/dsrm-closed.png');
+        image.fadeIn('fast');
+      });
+
+      $('#ibsrm').click(function(){
+        var image = $(this);
+        if(image.attr('src') == 'images/ibsrm.png')
+          image.attr('src', 'images/ibsrm-owl.png');
+        else
+          image.attr('src', 'images/ibsrm.png');
+        image.fadeIn('fast');
+      });
+
+
+      
+    </script>
+
+    <script>
+      function currentItemCarousel(n) {
+        showItemCarousel(n);
+      }
+
+      function showItemCarousel(n) {
+        var items = $($("section:nth-of-type(1) .carousel-container")[0]).children();
+        var dots = $($("section:nth-of-type(1) .carousel-dot-panel")[0]).children();
+        var i;
+
+        if (n > items.length+1 || n < 1)
+          return;
+
+        for (i = 0; i < items.length; i++) {
+            items[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        items[n-1].style.display = "block";  
+        dots[n-1].className += " active";
+      }
+
+      $(document).keydown(
+        function(e){ 
+
+          if(e.key == "ArrowLeft" || e.key == "ArrowRight" ){
+            var items = $($("section:nth-of-type(1) .carousel-container")[0]).children();
+            var itemCarouselIndex = 1;
+            items.each(function(index) { 
+              if(this.style.display == "block"){
+                itemCarouselIndex = index+1;
+              }
+            });
+
+            if (e.key == "ArrowRight") {
+              if(itemCarouselIndex < items.length)
+                showItemCarousel(itemCarouselIndex += 1);       
+              return false
+            } else if (e.key == "ArrowLeft") {
+                if(itemCarouselIndex > 1)
+                  showItemCarousel(itemCarouselIndex -= 1);       
+                return false
+            }
+          }
+        }
+      );
+
+      var startAllCarousels = function(){
+        var carouselContainers=$(".carousel-container");
+        var dotPanels=$(".carousel-dot-panel");
+        for(var j=0; j<carouselContainers.length; j++){
+          var items = $(carouselContainers[j]).children();
+          if(items.length > 0){
+            var dots = $(dotPanels[j]).children();
+
+            for (var k = 0; k < items.length; k++) {
+              items[k].style.display = "none";  
+            }
+            for (var m = 0; m < dots.length; m++) {
+              dots[m].className = dots[m].className.replace(" active", "");
+            }
+
+            items[0].style.display = "block";  
+            dots[0].className += " active";
+          }
+        }
+      }
+
+      // window.ws.el.addEventListener('ws:slide-change', startImmediateCarousel);
+
+      startAllCarousels();
+
+      </script>
 
   </body>
 </html>
