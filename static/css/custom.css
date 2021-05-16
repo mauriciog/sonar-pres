@@ -96,3 +96,19 @@ p.title-correlated-works{
     font-size: 2.5rem;
     font-weight: 500;
 }
+
+.experiment-container .column{
+	padding-top:0px;
+}
+
+.experiment-container .flexblock{
+	margin-top:0px;
+}
+
+.experiment-container li{
+	padding-top:0px;
+}
+
+.experiment-container .max-bg-white{
+	padding: 5px;
+}
